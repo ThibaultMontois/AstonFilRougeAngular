@@ -1,6 +1,7 @@
-root {
+:root {
     --bg-clr-primary: #FFFFFF;
-    --bg-clr-secondary: #2D2D2D;
+    --bg-clr-secondary: #2D2D2D; //
+    --bg-clr-tertiary: #9EFD38; //
 
     --clr-primary: #9EFD38;
     --clr-secondary: #7C98FC;
@@ -9,5 +10,15 @@ root {
     --clr-quinquennial: #B0553C;
 
     --fnt-clr-primary: #2D2D2D;
-    --fnt-clr-secondary: #FFFFFF;
+    --fnt-clr-secondary: #FFFFFF; //
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; 
 }
