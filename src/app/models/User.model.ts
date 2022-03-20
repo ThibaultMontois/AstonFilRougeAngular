@@ -1,6 +1,6 @@
-import { Role } from "../enums/Role.enum";
-import { Address } from "./Address.model";
-import { Club } from "./Club.model";
+import { Role } from "../enums/role.enum";
+import { Address } from "./address.model";
+import { Club } from "./club.model";
 
 export class User {
     id: number;

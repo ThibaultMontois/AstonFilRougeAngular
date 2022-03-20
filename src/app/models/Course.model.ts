@@ -1,9 +1,9 @@
 import { Time } from "@angular/common";
-import { CourseStatus } from "../enums/CourseStatus.enum";
-import { CourseType } from "../enums/CourseType.enum";
-import { Role } from "../enums/Role.enum";
-import { Address } from "./Address.model";
-import { User } from "./User.model";
+import { CourseStatus } from "../enums/course-status.enum";
+import { CourseType } from "../enums/course-type.enum";
+import { Role } from "../enums/role.enum";
+import { Address } from "./address.model";
+import { User } from "./user.model";
 
 export class Course {
     id: number;

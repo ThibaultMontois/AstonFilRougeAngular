@@ -1,5 +1,5 @@
 import { Time } from "@angular/common";
-import { Day } from "../enums/Day.enum";
+import { Day } from "../enums/day.enum";
 
 export class OpeningDay {
     day: Day;

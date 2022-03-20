@@ -1,6 +1,6 @@
-import { Address } from "./Address.model";
-import { Course } from "./Course.model";
-import { OpeningDay } from "./OpeningDay.model";
+import { Address } from "./address.model";
+import { Course } from "./course.model";
+import { OpeningDay } from "./opening-day.model";
 
 export class Club {
     id: number;
