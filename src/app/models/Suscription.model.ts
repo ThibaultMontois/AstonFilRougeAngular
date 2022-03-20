@@ -1,4 +1,4 @@
-import { BillingPeriod } from "../enums/BillingPeriod.enum";
+import { BillingPeriod } from "../enums/billing-period.enum";
 
 export class Suscription {
     id: number;

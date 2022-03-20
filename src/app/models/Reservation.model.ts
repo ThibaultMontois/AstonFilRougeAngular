@@ -1,5 +1,5 @@
-import { ReservationStatus } from "../enums/ReservationStatus.enum";
-import { Course } from "./Course.model";
+import { ReservationStatus } from "../enums/reservation-status.enum";
+import { Course } from "./course.model";
 
 export class Reservation {
     id: number;
