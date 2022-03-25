@@ -1,11 +1,11 @@
 import { BillingPeriod } from "../enums/billing-period.enum";
 
-export class Suscription {
+export class Subscription {
     id: number;
     clientId: number;
     clubId: number;
-    // To do : SuscriptionType (enum)
-    // To do : SuscriptionOptions (enum)
+    // To do : SubscriptionType (enum)
+    // To do : SubscriptionOptions (enum)
     price: number;
     billingPeriod: BillingPeriod;
     startDate: Date;
