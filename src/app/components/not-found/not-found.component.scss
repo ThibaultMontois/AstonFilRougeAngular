@@ -1,0 +1,33 @@
+.not-found {
+    padding: 97px 0;
+    background-color: var(--bg-clr-secondary);
+    border: 3px dashed var(--bg-clr-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h1,
+    h2,
+    p,
+    a {
+        color: var(--fnt-clr-secondary);
+    }
+    h1 {
+        margin: 5px;
+        font-size: 10em;
+        font-weight: bolder;
+    }
+    h2 {
+        margin: 20px;
+        font-size: 2.5em;
+    }
+    p {
+        margin: 5px;
+        font-size: 1.1em;
+    }
+    a {
+        margin: 20px;
+        background-color: var(--bg-clr-tertiary);     
+        color: var(--fnt-clr-secondary); 
+    }
+}

@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyStatementComponent } from './components/privacy-statement/privacy-statement.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LegalNoticeComponent } from './components/legal-notice/legal-notice.com
     HomeComponent,
     TermsAndConditionsComponent,
     PrivacyStatementComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
