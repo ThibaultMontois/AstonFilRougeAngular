@@ -1,0 +1,54 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+    &__social {
+        width: 100%;
+        padding: 25px 0;
+        background-color: var(--bg-clr-secondary);
+        display: flex;
+        justify-content: center;
+        a {
+            margin: 0 25px;
+            padding: 10px;
+            border: 1px solid var(--fnt-clr-secondary);
+            border-radius: 50%;
+            font-size: 1.1em;
+            color: var(--fnt-clr-secondary);
+        }
+    }
+    &__menu {
+        padding: 25px 50px;
+        display: flex;
+        gap: 20%;
+        h1 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: black;
+        }
+        a {
+            line-height: 1.5;
+            font-size: 1.1em;
+            color: var(--fnt-clr-primary);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__services,
+    &__teams,
+    &__general {
+        display: flex;
+        flex-direction: column;
+    }
+    &__copyright {
+        position: absolute;
+        bottom: 25px;
+        right: 50px;
+        color: gray;
+    }
+}
+  

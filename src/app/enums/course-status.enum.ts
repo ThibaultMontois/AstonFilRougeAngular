@@ -1,7 +1,7 @@
 export enum CourseStatus {
     Pending,
     Planned,
-    Canceled,
+    Cancelled,
     InProgress,
     Over
 }

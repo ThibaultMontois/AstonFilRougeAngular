@@ -1,6 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
+    height: 100px;
     padding: 0 100px 0 50px;
     background-color: var(--bg-clr-secondary);
     align-items: center;
@@ -31,7 +32,6 @@
             }
         }
         &__under {
-            
             .select-title::after {
                 content: '▼';
                 margin-left: 10px;
