@@ -1,0 +1,17 @@
+.privacy-statement {
+    padding: 25px 50px;
+    background-color: var(--bg-clr-primary);
+    line-height: 1.5;
+    text-align: justify;
+    h1 {
+        margin-bottom: 10px;
+        font-size: 2em;
+        font-weight: bold;
+        color: black;
+    }
+    p {
+        margin-bottom: 25px;
+        font-size: 1.1em;
+        color: var(--fnt-clr-primary);
+    }
+}

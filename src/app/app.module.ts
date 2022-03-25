@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
+import { PrivacyStatementComponent } from './components/privacy-statement/privacy-statement.component';
+import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    PrivacyStatementComponent,
+    LegalNoticeComponent
   ],
   imports: [
     BrowserModule,
