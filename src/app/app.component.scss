@@ -1,0 +1,11 @@
+.page {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .container {
+        position: relative;
+        top: 100px;
+        padding: 25px 50px;
+    }
+}
