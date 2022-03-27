@@ -3,22 +3,24 @@
     top: 100px;
     width: 100%;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    // SOCIAL BAR  
     &__social {
         width: 100%;
         padding: 25px 0;
-        background-color: var(--bg-clr-secondary);
+        background-color: var(--clr-secondary);
         display: flex;
         justify-content: center;
         a {
             margin: 0 25px;
             padding: 10px;
-            border: 1px solid var(--fnt-clr-secondary);
+            border: 1px solid var(--clr-primary);
             border-radius: 50%;
             font-size: 1.1em;
-            color: var(--fnt-clr-secondary);
+            color: var(--clr-primary);
         }
     }
+    // FOOTER MENU
     &__menu {
         padding: 25px 50px;
         display: flex;
@@ -27,28 +29,27 @@
             margin-bottom: 10px;
             font-size: 1.3em;
             font-weight: bold;
-            color: black;
+            color: var(--clr-secondary);
         }
         a {
             line-height: 1.5;
             font-size: 1.1em;
-            color: var(--fnt-clr-primary);
+            color: var(--clr-secondary);
             &:hover {
                 text-decoration: underline;
             }
         }
     }
-    &__services,
-    &__teams,
-    &__general {
+    &__services, &__teams, &__general {
         display: flex;
         flex-direction: column;
     }
+    // COPYRIGHT
     &__copyright {
         position: absolute;
         bottom: 25px;
         right: 50px;
-        color: gray;
+        color: var(--clr-septenary);
     }
 }
   
