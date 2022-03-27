@@ -1,18 +1,3 @@
-@font-face {
-    font-family: "Heading Pro";
-    src: url("/src/assets/font/HeadingPro/HeadingProDouble-Regular.woff2") format("woff2");
-}
-@font-face {
-    font-family: "Heading Pro";
-    src: url("/src/assets/font/HeadingPro/HeadingProTreble-ExtraBold.woff2") format("woff2");
-    font-weight: bold;
-}
-@font-face {
-    font-family: "Heading Pro";
-    src: url("/src/assets/font/HeadingPro/HeadingProTreble-Heavy.woff2") format("woff2");
-    font-weight: bolder;
-}
-
 :root {
     --bg-clr-primary: #FFFFFF;
     --bg-clr-secondary: #2D2D2D;
@@ -41,5 +26,5 @@ textarea,
 input,
 select,
 * {
-    font-family: 'Heading Pro', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
