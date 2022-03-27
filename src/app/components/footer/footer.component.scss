@@ -23,6 +23,7 @@
     // FOOTER MENU
     &__menu {
         padding: 25px 50px;
+        background-color: var(--clr-primary);
         display: flex;
         gap: 20%;
         @media screen and (max-width: 511px) {
