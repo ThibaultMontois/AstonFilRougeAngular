@@ -25,6 +25,11 @@
         padding: 25px 50px;
         display: flex;
         gap: 20%;
+        @media screen and (max-width: 511px) {
+            padding-bottom: 75px;
+            flex-direction: column;
+            gap: 25px;
+        }
         h1 {
             margin-bottom: 10px;
             font-size: 1.3em;
