@@ -29,7 +29,7 @@
         a {
             color: var(--fnt-clr-secondary);
             &:hover {
-                background-color: black;
+                background-color: var(--clr-secondary);
             }
         }
         &__under {
@@ -49,7 +49,7 @@
                 li {
                     width: 100%;
                     &:hover {
-                        background-color: black;
+                        background-color: var(--clr-secondary);
                     }
                 }
             }
