@@ -3,27 +3,44 @@
     z-index: 10;
     width: 100%;
     height: 100px;
-    padding: 0 100px 0 50px;
+    padding: 0 2.5%;
     background-color: var(--clr-secondary);
     align-items: center;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 9fr 2fr;
-    gap: 100px;
+    gap: 80px;
+    @media screen and (max-width: 511px) {
+        grid-template-columns: 1fr 3fr;
+        gap: 10px;
+    }
+    @media screen and (min-width: 512px) and (max-width: 1023px) {     
+        grid-template-columns: 1fr 4fr 1fr;
+        gap: 20px;
+    }
     // GENERAL
     a {
         color: var(--clr-primary);
     }
     // LOGO
     &__logo {
+        grid-row: 1;
         grid-column: 1;
+        @media screen and (max-width: 511px) {     
+            display: none;
+        }
         img {
             width: 96px;
         }
     }
     // MENU
     nav {
+        grid-row: 1;
         grid-column: 2;
         justify-self: end;
+        @media screen and (max-width: 1023px) {
+            display: none;    
+        }
     }
     &__menu {
         display: flex;
@@ -63,15 +80,38 @@
     }
     // 2ND MENU
     &__secondary-menu {
-        grid-column: 3;
+        grid-row: 1;
+        grid-column: 3;      
         display: flex;
         justify-content: center;
         gap: 20px;
+        @media screen and (min-width: 512px) and (max-width: 1023px) {     
+            grid-column: 2;
+            justify-self: end;  
+        }
     }
     &__sign-in {  
         background-color: var(--clr-quaternary);
     }
     &__sign-on {  
         background-color: var(--clr-tertiary);
+    }
+    // BURGER BUTTON
+    &__burger {
+        display: none;
+        grid-row: 1;
+        @media screen and (max-width: 511px) {     
+            display: block;
+            grid-column: 1;
+            justify-self: start;
+        }
+        @media screen and (min-width: 512px) and (max-width: 1023px) {
+            display: block;
+            grid-column: 3;
+            justify-self: end;
+        }
+        img {
+            width: 60px;
+        }
     }
 }

@@ -1,5 +1,7 @@
 .legal-notice {
-    padding: 50px 100px;
+    padding: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: var(--clr-primary);
     line-height: 1.5;
     text-align: justify;
@@ -15,16 +17,13 @@
     }
     .info-ss {
         margin: 50px 0;
-        line-height: 0.5;
     }
     .info-site {
         h2 {  
-            margin-bottom: 15px;
             font-weight: bold;
         }
-        p {
+        h2, p {
             margin-bottom: 15px;
-            line-height: 0.5;
         }
     }
 }
