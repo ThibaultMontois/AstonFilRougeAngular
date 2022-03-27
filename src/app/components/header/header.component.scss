@@ -7,9 +7,14 @@
     background-color: var(--clr-secondary);
     align-items: center;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 9fr 2fr;
     gap: 80px;
-    @media screen and (max-width: 1023px) {     
+    @media screen and (max-width: 511px) {
+        grid-template-columns: 1fr 3fr;
+        gap: 10px;
+    }
+    @media screen and (min-width: 512px) and (max-width: 1023px) {     
         grid-template-columns: 1fr 4fr 1fr;
         gap: 20px;
     }
@@ -19,13 +24,18 @@
     }
     // LOGO
     &__logo {
+        grid-row: 1;
         grid-column: 1;
+        @media screen and (max-width: 511px) {     
+            display: none;
+        }
         img {
             width: 96px;
         }
     }
     // MENU
     nav {
+        grid-row: 1;
         grid-column: 2;
         justify-self: end;
         @media screen and (max-width: 1023px) {
@@ -70,11 +80,12 @@
     }
     // 2ND MENU
     &__secondary-menu {
+        grid-row: 1;
         grid-column: 3;      
         display: flex;
         justify-content: center;
         gap: 20px;
-        @media screen and (max-width: 1023px) {     
+        @media screen and (min-width: 512px) and (max-width: 1023px) {     
             grid-column: 2;
             justify-self: end;  
         }
@@ -87,14 +98,20 @@
     }
     // BURGER BUTTON
     &__burger {
-        display: none; 
-        @media screen and (max-width: 1023px) {
+        display: none;
+        grid-row: 1;
+        @media screen and (max-width: 511px) {     
+            display: block;
+            grid-column: 1;
+            justify-self: start;
+        }
+        @media screen and (min-width: 512px) and (max-width: 1023px) {
             display: block;
             grid-column: 3;
             justify-self: end;
-            img {
-                width: 60px;
-            }
+        }
+        img {
+            width: 60px;
         }
     }
 }
