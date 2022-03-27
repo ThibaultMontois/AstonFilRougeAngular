@@ -4,17 +4,23 @@
     width: 100%;
     height: 100px;
     padding: 0 100px 0 50px;
-    background-color: var(--bg-clr-secondary);
+    background-color: var(--clr-secondary);
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-columns: 1fr 9fr 2fr;
     gap: 100px;
+    // GENERAL
+    a {
+        color: var(--clr-primary);
+    }
+    // LOGO
     &__logo {
         grid-column: 1;
         img {
             width: 96px;
         }
     }
+    // MENU
     nav {
         grid-column: 2;
         justify-self: end;
@@ -26,11 +32,8 @@
         li {
             position: relative;
         }
-        a {
-            color: var(--fnt-clr-secondary);
-            &:hover {
-                background-color: black;
-            }
+        a:hover {
+            background-color: var(--clr-quaternary);
         }
         &__under {
             .select-title::after {
@@ -44,12 +47,12 @@
                 top: 175%;
                 min-width: 100%;
                 border-radius: 5px;
-                background-color: var(--bg-clr-secondary);
+                background-color: var(--clr-secondary);
                 cursor: pointer;
                 li {
                     width: 100%;
                     &:hover {
-                        background-color: black;
+                        background-color: var(--clr-quaternary);
                     }
                 }
             }
@@ -58,9 +61,17 @@
             }
         }
     }
+    // 2ND MENU
+    &__secondary-menu {
+        grid-column: 3;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__sign-in {  
+        background-color: var(--clr-quaternary);
+    }
     &__sign-on {  
-        grid-column: 3;   
-        background-color: var(--bg-clr-tertiary);     
-        color: var(--fnt-clr-secondary);   
+        background-color: var(--clr-tertiary);
     }
 }
