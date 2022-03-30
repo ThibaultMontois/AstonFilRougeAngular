@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -9,7 +10,12 @@ import { UserLoginComponent } from './components/user-login/user-login.component
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: UserLoginComponent },
+  {
+    path: 'login', children: [
+      { path: 'forget', component: ForgetPasswordComponent },
+      { path: '', component: UserLoginComponent }
+    ]
+  },
   { path: 'privacy-statement', component: PrivacyStatementComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },

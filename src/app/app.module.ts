@@ -15,6 +15,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { AuthUserService } from './services/auth-user.service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     PrivacyStatementComponent,
     LegalNoticeComponent,
     NotFoundComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
