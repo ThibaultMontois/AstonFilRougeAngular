@@ -1,1 +1,14 @@
-<p>user-login works!</p>
+<div class="user-login">
+    <div class="user-login__card">
+        <img src="/assets/img/Duck_Antoine.jpg" alt="Canard sportif">
+        <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <input type='email' formControlName="email" maxlength="256" placeholder="E-mail ou Téléphone" />
+            <input type='password' formControlName="password" maxlength="256"  placeholder="Mot de passe" />
+            <div class="form__btns">
+                <button class="btn user-login__cancel" (click)="onCancel()">Annuler</button>
+                <button class="btn user-login__valid" type='submit' [disabled]="formGroup.invalid">Connexion</button>
+            </div>  
+        </form>
+        <a href="#">Mot de passe oublié ?</a>
+    </div>
+</div>

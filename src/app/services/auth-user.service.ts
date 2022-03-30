@@ -9,8 +9,7 @@ import { AuthUser, JWT } from '../models/auth.model';
 })
 export class AuthUserService {
 
-  private apiUrl: string = 'TO DELETE';
-  // private apiUrl: string = environment.apiUrl;
+  private apiUrl: string = environment.apiUrl;
   private userSubject: BehaviorSubject<AuthUser | null>;
 
   constructor(private http: HttpClient) {
