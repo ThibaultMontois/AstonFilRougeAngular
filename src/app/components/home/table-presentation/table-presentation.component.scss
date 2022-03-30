@@ -1,0 +1,22 @@
+.table{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+
+}
+.table .col{
+    display: inline-block;
+    padding: var(--default-padding);
+    width: 24%;
+}
+.table .row:nth-child(01){
+    text-align: center;
+    padding: 30px;
+}
+
+@media screen and (max-width: 985px) {
+    .table .col{
+        width: 100%;
+        display: block;
+    }
+}

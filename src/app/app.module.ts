@@ -10,6 +10,8 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
 import { PrivacyStatementComponent } from './components/privacy-statement/privacy-statement.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TablePresentationComponent } from './components/home/table-presentation/table-presentation.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     TermsAndConditionsComponent,
     PrivacyStatementComponent,
     LegalNoticeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TablePresentationComponent,
   ],
   imports: [
     BrowserModule,
