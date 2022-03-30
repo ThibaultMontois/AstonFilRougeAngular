@@ -31,7 +31,6 @@ export class AuthUserService {
     return jwt_token ? JSON.parse(jwt_token) : null;
   }
 
-  // login: admin@example.com & password: 0000
   login(email: string, password: string): Observable<AuthUser | null> {
     const data = {
       email: email,
