@@ -10,6 +10,7 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
 import { PrivacyStatementComponent } from './components/privacy-statement/privacy-statement.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { UserLoginComponent } from './components/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     TermsAndConditionsComponent,
     PrivacyStatementComponent,
     LegalNoticeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
