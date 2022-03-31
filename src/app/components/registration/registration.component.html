@@ -1,0 +1,41 @@
+<div class="registration">
+    <div class="registration__card">
+        <header>
+            <h1>Informations générales</h1>
+        </header>
+        <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <div class="form__name">
+                <input type="text" formControlName="firstName" maxlength="256" placeholder="Prénom">
+                <input type="text" formControlName="lastName" maxlength="256" placeholder="Nom">
+            </div>
+            <div>
+                <label for="birthDate">Date de naissance : </label>
+                <input type="date" formControlName="birthDate" name="birthDate" id="birthDate">
+            </div>
+            <div class="form__address-street">
+                <input type="text" formControlName="street" maxlength="256" placeholder="Adresse">
+                <input type="text" formControlName="complement" maxlength="256" placeholder="Complément d'adresse">
+            </div>
+            <div class="form__address-city">
+                <input type="text" formControlName="zipCode" maxlength="256" placeholder="Code postal">
+                <input type="text" formControlName="city" maxlength="256" placeholder="Ville">
+            </div>
+            <div class="form__contact">
+                <input type="email" formControlName="email" maxlength="256" placeholder="Email">
+                <input type="text" formControlName="phoneNumber" maxlength="21" placeholder="Téléphone">
+            </div>
+            <div class="form_password">
+                <input type="password" formControlName="password" name="password1" id="password1" placeholder="Mot de passe">
+                <input type="password" formControlName="password" name="password2" id="password2" placeholder="Confirmation">
+            </div>
+            <div class="form__cguv">
+                <label for="cguv">J'ai pris connaissance et accepte les <a href="" routerLink="/terms-and-conditions" target="_blank">CGU et CGV</a>*</label>
+                <input type="checkbox" formControlName="cguv" name="cguv" id="cguv">
+            </div>
+            <div class="form__btns">
+                <button class="btn registration__cancel" (click)="onCancel()">Annuler</button>
+                <button class="btn registration__valid" type='submit' [disabled]="formGroup.invalid">Valider</button>
+            </div>
+        </form>
+    </div>
+</div>
