@@ -15,5 +15,5 @@ export class JWT {
 export class AuthUser {
     email: string = '';
     role: Role = Role.Guest;
-    exp: number = 0;
+    exp: Date | null = null;
 }
