@@ -6,6 +6,21 @@
     --clr-quinary: #B2FC62;
     --clr-senary: #FC7049;
     --clr-septenary: #B0553C;
+
+    --default-padding:15px;
+}
+
+@font-face {
+    font-family: "Heading";
+    src: url("/assets/fonts/HeadingProDouble-Regular.woff2") format('woff');
+}
+@font-face {
+    font-family: "HeadingExtraBold";
+    src: url("/assets/fonts/HeadingProTreble-ExtraBold.woff2") format('woff');
+}
+@font-face {
+    font-family: "HeadingHeavy";
+    src: url("/assets/fonts/HeadingProTreble-Heavy.woff2") format('woff');
 }
 
 *, 
@@ -21,7 +36,39 @@ textarea,
 input,
 select,
 * {
-    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Heading','Arial Narrow', Arial, sans-serif !important;
+    font-size: 15px;
+}
+
+h1{
+    font-size: 24px;
+    font-family: 'HeadingHeavy','Arial Narrow', Arial, sans-serif !important;
+}
+
+h2{
+    font-size: 21px;
+    font-family: 'HeadingHeavy','Arial Narrow', Arial, sans-serif !important;
+}
+h3{
+    font-size: 18px;
+    font-family: 'HeadingHeavy','Arial Narrow', Arial, sans-serif !important;
+}
+
+/*HACKS*/
+
+::-webkit-scrollbar {
+    margin: 0px;
+    height: 8px;
+    width: 10px;
+    background: #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
 }
 
 body {
