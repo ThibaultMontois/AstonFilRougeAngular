@@ -77,10 +77,12 @@
                 button {
                     border: 0;
                     color: var(--clr-primary);
+                    text-shadow: 0 0 10px var(--clr-secondary);
                     &:disabled {
                         border: 1px solid gray;
                         background-color: initial;
                         color: gray;
+                        text-shadow: none;
                         &:hover {
                             filter: none;
                         }
