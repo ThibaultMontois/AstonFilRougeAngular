@@ -12,6 +12,7 @@ import { TermsAndConditionsComponent } from './components/terms-and-conditions/t
 import { PrivacyStatementComponent } from './components/privacy-statement/privacy-statement.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TablePresentationComponent } from './components/home/table-presentation/table-presentation.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { AuthUserService } from './services/auth-user.service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -28,6 +29,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     PrivacyStatementComponent,
     LegalNoticeComponent,
     NotFoundComponent,
+    TablePresentationComponent,
     UserLoginComponent,
     ForgetPasswordComponent,
     RegistrationComponent
