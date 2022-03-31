@@ -1,6 +1,6 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forget-password',
@@ -11,13 +11,13 @@ export class ForgetPasswordComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private fb: FormBuilder, private location: Location) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.formGroup = this.fb.group({
       email: ['', [
         Validators.required,
-        Validators.email
+        Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
       ]]
     });
   }
@@ -31,6 +31,6 @@ export class ForgetPasswordComponent implements OnInit {
   }
 
   onCancel(): void {
-    this.location.back();
+    this.router.navigate(['']);
   }
 }
