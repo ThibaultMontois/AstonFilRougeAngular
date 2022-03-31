@@ -50,7 +50,7 @@ export class FakeAuthUserService {
 
     localStorage.setItem('auth_user', JSON.stringify(this.authUser));
 
-    return of<AuthUser | null>(this.authUser); 
+    return of<AuthUser | null>(this.authUser);
   }
 
   logout(): void {
