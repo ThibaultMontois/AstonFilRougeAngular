@@ -19,6 +19,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { CoachCardsComponent } from './components/coach-cards/coach-cards.component';
+import { CarouselComponent } from './components/home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CoachCardsComponent } from './components/coach-cards/coach-cards.compon
     UserLoginComponent,
     ForgetPasswordComponent,
     RegistrationComponent,
-    CoachCardsComponent
+    CoachCardsComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
