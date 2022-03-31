@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Role } from 'src/app/enums/role.enum';
 import { Address } from 'src/app/models/address.model';
 import { User } from 'src/app/models/user.model';
@@ -14,7 +15,7 @@ export class RegistrationComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private fb: FormBuilder, private location: Location) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.formGroup = this.fb.group({
@@ -83,11 +84,11 @@ export class RegistrationComponent implements OnInit {
 
     let address: Address = new Address(0, street, zipCode, city, number, complement);
     let user: User = new User(0, firstName, lastName, email, phoneNumber, address, birthDate, Role.Member);
-    
+
     // TO DO
   }
 
   onCancel(): void {
-    this.location.back();
+    this.router.navigate(['']);
   }
 }
