@@ -1,32 +1,40 @@
 <div class="registration">
+    <h1>Inscription</h1>
     <div class="registration__card">
-        <header>
-            <h1>Informations générales</h1>
-        </header>
         <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <h3>Informations générales</h3>
             <div class="form__name">
                 <input type="text" formControlName="firstName" maxlength="256" placeholder="Prénom">
                 <input type="text" formControlName="lastName" maxlength="256" placeholder="Nom">
             </div>
-            <div>
+            <div class="form__birthDate">
                 <label for="birthDate">Date de naissance : </label>
                 <input type="date" formControlName="birthDate" name="birthDate" id="birthDate">
             </div>
+            <h3>Adresse</h3>
+            <div class="form__address-number">
+                <label for="number">Numéro de rue : </label>
+                <input type="number" formControlName="number" name="number" id="number">
+            </div>
             <div class="form__address-street">
                 <input type="text" formControlName="street" maxlength="256" placeholder="Adresse">
+            </div>
+            <div class="form__address-complement">
                 <input type="text" formControlName="complement" maxlength="256" placeholder="Complément d'adresse">
             </div>
             <div class="form__address-city">
                 <input type="text" formControlName="zipCode" maxlength="256" placeholder="Code postal">
                 <input type="text" formControlName="city" maxlength="256" placeholder="Ville">
             </div>
+            <h3>Contact</h3>
             <div class="form__contact">
                 <input type="email" formControlName="email" maxlength="256" placeholder="Email">
                 <input type="text" formControlName="phoneNumber" maxlength="21" placeholder="Téléphone">
             </div>
+            <h3>Sécurité</h3>
             <div class="form_password">
-                <input type="password" formControlName="password" name="password1" id="password1" placeholder="Mot de passe">
-                <input type="password" formControlName="password" name="password2" id="password2" placeholder="Confirmation">
+                <input type="password" formControlName="password" name="password" id="password" placeholder="Mot de passe">
+                <input type="password" formControlName="password" name="passwordConf" id="passwordConf" placeholder="Confirmation">
             </div>
             <div class="form__cguv">
                 <label for="cguv">J'ai pris connaissance et accepte les <a href="" routerLink="/terms-and-conditions" target="_blank">CGU et CGV</a>*</label>
