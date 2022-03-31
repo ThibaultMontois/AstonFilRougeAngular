@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthUser } from 'src/app/models/auth.model';
 import { AuthUserService } from 'src/app/services/auth-user.service';
+import { FakeAuthUserService } from 'src/app/services/fake-auth-user.service';
 
 @Component({
   selector: 'app-user-login',
@@ -14,7 +15,7 @@ export class UserLoginComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private fb: FormBuilder, private location: Location, private authUserService: AuthUserService, private router: Router) { }
+  constructor(private fb: FormBuilder, private location: Location, private authUserService: FakeAuthUserService, private router: Router) { }
 
   ngOnInit(): void {
     this.formGroup = this.fb.group({
