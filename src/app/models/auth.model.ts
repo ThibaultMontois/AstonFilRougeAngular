@@ -13,7 +13,13 @@ export class JWT {
 }
 
 export class AuthUser {
-    email: string = '';
-    role: Role = Role.Guest;
-    exp: Date | null = null;
+    email: string | null;
+    role: Role;
+    exp: Date | null;
+
+    constructor(email?: string | null, role?: Role, exp?: Date | null) {
+        this.email = email ?? null;
+        this.role = role ?? Role.Guest;
+        this.exp = exp ?? null;
+    }
 }
