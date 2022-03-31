@@ -18,6 +18,7 @@ import { AuthUserService } from './services/auth-user.service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { CoachCardsComponent } from './components/coach-cards/coach-cards.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RegistrationComponent } from './components/registration/registration.co
     TablePresentationComponent,
     UserLoginComponent,
     ForgetPasswordComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CoachCardsComponent
   ],
   imports: [
     BrowserModule,
