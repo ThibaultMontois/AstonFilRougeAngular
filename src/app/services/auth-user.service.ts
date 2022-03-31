@@ -36,7 +36,7 @@ export class AuthUserService {
       password: password
     }
 
-    return this.http.post<JWT>(`${this.apiUrl}/login`, data)
+    return this.http.post<JWT>(`${this.apiUrl}/authenticate`, data)
       .pipe(tap(data => console.log(data)))
       .pipe(map((data: JWT): AuthUser | null => {
 
