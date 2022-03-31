@@ -81,7 +81,8 @@
     // 2ND MENU
     &__secondary-menu {
         grid-row: 1;
-        grid-column: 3;      
+        grid-column: 3;
+        text-shadow: 0 0 10px var(--clr-secondary);    
         display: flex;
         justify-content: center;
         gap: 20px;
