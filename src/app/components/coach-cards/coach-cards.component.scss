@@ -9,7 +9,7 @@ div.cardList{
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    align-items: flex-end;
+    align-items: center
 }
 div.cardList div.card{
     display: inline-block;
@@ -83,4 +83,11 @@ div.cardList a, div.cardList a:hover, div.cardList a:visited{
 div.cardList a:hover{
     text-decoration: dashed !important;
     color:#B2FC62 !important;
+}
+
+@media screen and (max-width:700px) {
+    div.cardList{
+        flex-direction: column; 
+        align-items: center 
+    }
 }
