@@ -20,6 +20,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { RegistrationComponent } from './components/registration/registration.component';
 import { CoachCardsComponent } from './components/coach-cards/coach-cards.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
+import { CoursesPageComponent } from './components/courses-page/courses-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CarouselComponent } from './components/home/carousel/carousel.component
     ForgetPasswordComponent,
     RegistrationComponent,
     CoachCardsComponent,
-    CarouselComponent
+    CarouselComponent,
+    CoursesPageComponent
   ],
   imports: [
     BrowserModule,
