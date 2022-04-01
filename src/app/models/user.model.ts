@@ -13,7 +13,7 @@ export class User {
     role: Role;
     job: string | null;
     club: Club | null;
-    description: string | null
+    description: string | null;
     creationDate: Date;
     updateDate: Date | null;
 

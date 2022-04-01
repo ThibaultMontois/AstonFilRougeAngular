@@ -8,12 +8,10 @@ import { AuthUser } from '../models/auth.model';
 })
 export class FakeAuthUserService {
 
-  private authUser: AuthUser | null;
-  private userSubject: BehaviorSubject<AuthUser | null>;
+  private authUser!: AuthUser;
+  private userSubject: BehaviorSubject<AuthUser>;
 
   constructor() {
-    this.authUser = null;
-    this.userSubject = new BehaviorSubject<AuthUser | null>(null);
     const data: string | null = localStorage.getItem('auth_user');
     if (data) {
       this.authUser = JSON.parse(data); 
@@ -21,10 +19,10 @@ export class FakeAuthUserService {
     else {
       this.login('','');
     }
-    this.userSubject.next(this.authUser);
+    this.userSubject = new BehaviorSubject<AuthUser>(this.authUser);
   }
 
-  get user(): AuthUser | null {
+  get user(): AuthUser {
     return this.userSubject.value;
   }
 

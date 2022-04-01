@@ -3,10 +3,10 @@ export class Address {
     number: number | null;
     street: string;
     complement: string | null;
-    zipCode: number;
+    zipCode: string;
     city: string;
 
-    constructor(id: number, street: string, zipCode: number, city: string, number: number | null, complement?: string | null,) {
+    constructor(id: number, street: string, zipCode: string, city: string, number: number | null, complement?: string | null,) {
         this.id = id;
         this.number = number ?? null;
         this.street = street;

@@ -1,5 +1,5 @@
 <div class="page">
-    <app-header></app-header>
+    <app-header [authUser]="authUser" (logOutEmitter)="logOut($event)"></app-header>
     <div class="container">
         <router-outlet></router-outlet>
     </div>

@@ -37,7 +37,9 @@ export class UserLoginComponent implements OnInit {
     const password: string = this.formGroup.value.password;
 
     this.authUserService.login(email, password).subscribe((user: AuthUser | null) => {
-      if (user) this.router.navigate(['']);
+      if (user) this.router.navigate(['']).then(() => {
+        window.location.reload();
+      });
     });
   }
 
