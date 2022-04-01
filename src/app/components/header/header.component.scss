@@ -80,14 +80,20 @@
     }
     // 2ND MENU
     &__secondary-menu {
-        grid-row: 1;
-        grid-column: 3;      
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        @media screen and (min-width: 512px) and (max-width: 1023px) {     
-            grid-column: 2;
-            justify-self: end;  
+        &__logout, &__login {
+            grid-row: 1;
+            grid-column: 3;
+            text-shadow: 0 0 10px var(--clr-secondary);    
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            @media screen and (min-width: 512px) and (max-width: 1023px) {     
+                grid-column: 2;
+                justify-self: end;  
+            }
+        }
+        &__login > ul {
+            width: max-content;
         }
     }
     &__sign-in {  
@@ -95,6 +101,12 @@
     }
     &__sign-on {  
         background-color: var(--clr-tertiary);
+    }
+    &__log-out {
+        border: 0;
+        background-color: var(--clr-senary);
+        color: var(--clr-primary);
+        text-shadow: 0 0 10px var(--clr-secondary);
     }
     // BURGER BUTTON
     &__burger {

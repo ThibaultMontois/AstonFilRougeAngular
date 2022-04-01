@@ -72,7 +72,7 @@ export class RegistrationComponent implements OnInit {
     const number: number | null = this.formGroup.value.number;
     const street: string = this.formGroup.value.street;
     const complement: string | null = this.formGroup.value.complement;
-    const zipCode: number = parseInt(this.formGroup.value.zipCode);
+    const zipCode: string = this.formGroup.value.zipCode;
     const city: string = this.formGroup.value.city;
     const email: string = this.formGroup.value.email;
     const phoneNumber: string = this.formGroup.value.phoneNumber;
