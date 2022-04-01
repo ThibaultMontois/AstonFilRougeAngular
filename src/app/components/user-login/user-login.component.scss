@@ -1,7 +1,14 @@
 .user-login {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    h1 {
+        color: var(--clr-secondary);
+    }
     &__card {
         width: 300px;
-        margin: 50px auto;
         padding: 50px;
         border-radius: 5px;
         background-color: white;
@@ -30,10 +37,12 @@
                 button {
                     border: 0;
                     color: var(--clr-primary);
+                    text-shadow: 0 0 10px var(--clr-secondary);
                     &:disabled {
                         border: 1px solid gray;
                         background-color: initial;
                         color: gray;
+                        text-shadow: none;
                         &:hover {
                             filter: none;
                         }

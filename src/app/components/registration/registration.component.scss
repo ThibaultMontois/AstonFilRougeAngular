@@ -1,7 +1,13 @@
 .registration {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    h1 {
+        color: var(--clr-secondary);
+    }
     &__card {
-        // width: 300px;
-        margin: 50px auto;
         padding: 50px;
         border-radius: 5px;
         background-color: white;
@@ -10,6 +16,10 @@
         flex-direction: column;
         align-items: center;
         gap: 25px;
+        h3 {
+            margin-bottom: 5px;
+            color: var(--clr-secondary);
+        }
         img {
             width: 100px;
         }
@@ -17,6 +27,10 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            label {
+                font-weight: 600;
+                color: var(--clr-secondary);
+            }
             input {
                 padding: 10px;
                 border: 0;
@@ -24,16 +38,51 @@
                 outline: 0;
                 background-color: var(--clr-primary);
             }
-            &__btns {
+            div {
                 display: flex;
+                justify-content: space-between;
                 gap: 20px;
+            }
+            .form__birthDate {
+                align-items: center;
+                input {
+                    width: 60%;
+                }
+            }
+            .form__address-number {
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                input {
+                    width: 75px;
+                }
+            }
+            .form__address-street {
+                input {
+                    width: 100%;
+                }
+            }
+            .form__address-complement {
+                input {
+                    width: 100%;
+                }
+            }
+            .form__cguv {
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0;
+            }
+            .form__btns {
+                justify-content: flex-end;
                 button {
                     border: 0;
                     color: var(--clr-primary);
+                    text-shadow: 0 0 10px var(--clr-secondary);
                     &:disabled {
                         border: 1px solid gray;
                         background-color: initial;
                         color: gray;
+                        text-shadow: none;
                         &:hover {
                             filter: none;
                         }

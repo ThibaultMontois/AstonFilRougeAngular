@@ -1,11 +1,13 @@
 .table{
     display: flex;
     justify-content: space-between;
-    width:100%;
-
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 .table .col{
-    display: inline-block;
+    display: block;
     padding: var(--default-padding);
     width: 24%;
 }
@@ -15,6 +17,14 @@
 }
 
 @media screen and (max-width: 985px) {
+    .table{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
     .table .col{
         width: 100%;
         display: block;
