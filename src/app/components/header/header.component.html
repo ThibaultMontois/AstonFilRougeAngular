@@ -40,10 +40,25 @@
             </li>
         </ul>
     </nav>
-    <div class="header__secondary-menu">
-        <a class="btn header__sign-in" *ngIf="authUser.role === 0" href="#" routerLink="login">Connexion</a>
-        <a class="btn header__sign-on" *ngIf="authUser.role === 0" href="#" routerLink="registration">Inscription</a>
-        <button class="btn header__log-out" *ngIf="authUser.role !== 0" (click)="logOut()">Déconnexion</button>
+    <div class="header__secondary-menu__logout" *ngIf="authUser.role === 0">
+        <a class="btn header__sign-in" href="#" routerLink="login">Connexion</a>
+        <a class="btn header__sign-on" href="#" routerLink="registration">Inscription</a>
+    </div>
+    <div class="header__secondary-menu__login" *ngIf="authUser.role !== 0">
+        <ul class="header__menu">
+            <li class="header__menu__under">
+                <a class="btn select-title" href="#">Mon compte</a>
+                    <ul>
+                        <li class="btn">
+                            <a href="#">Canard</a>
+                        </li>
+                        <li class="btn">
+                            <a href="#">Chat</a>
+                        </li>
+                    </ul>
+            </li>
+        </ul>  
+        <button class="btn header__log-out" (click)="logOut()">Déconnexion</button>
     </div>
     <div class="header__burger">
         <a href="#">
