@@ -1,14 +1,14 @@
 export class Address {
     id: number;
-    number: number | null;
+    num: number | null;
     street: string;
     complement: string | null;
     zipCode: string;
     city: string;
 
-    constructor(id: number, street: string, zipCode: string, city: string, number: number | null, complement?: string | null,) {
+    constructor(id: number, street: string, zipCode: string, city: string, num: number | null, complement?: string | null,) {
         this.id = id;
-        this.number = number ?? null;
+        this.num = num ?? null;
         this.street = street;
         this.complement = complement ?? null;
         this.zipCode = zipCode;

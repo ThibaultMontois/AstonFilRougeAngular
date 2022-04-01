@@ -6,13 +6,14 @@ export class User {
     id: number;
     firstName: string;
     lastName: string;
+    // password
     address: Address | null;
     email: string;
     phoneNumber: string;
     birthDate: Date | null;
     role: Role;
     job: string | null;
-    club: Club | null;
+    club: Club | null; // not null ??
     description: string | null;
     creationDate: Date;
     updateDate: Date | null;
