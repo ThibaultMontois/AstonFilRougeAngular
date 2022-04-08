@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { Role } from '../enums/role.enum';
-import { AuthUser } from '../models/auth.model';
+import { AuthUser } from '../models/auth-user.model';
 
 @Injectable({
   providedIn: 'root'

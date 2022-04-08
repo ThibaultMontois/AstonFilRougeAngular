@@ -2,7 +2,7 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthUser } from 'src/app/models/auth.model';
+import { AuthUser } from 'src/app/models/auth-user.model';
 import { AuthUserService } from 'src/app/services/auth-user.service';
 import { FakeAuthUserService } from 'src/app/services/fake-auth-user.service';
 

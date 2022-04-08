@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthUser } from './models/auth.model';
+import { AuthUser } from './models/auth-user.model';
 import { FakeAuthUserService } from './services/fake-auth-user.service';
 
 @Component({

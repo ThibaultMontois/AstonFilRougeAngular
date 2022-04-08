@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AuthUser } from 'src/app/models/auth.model';
+import { AuthUser } from 'src/app/models/auth-user.model';
 
 @Component({
   selector: 'app-header',
