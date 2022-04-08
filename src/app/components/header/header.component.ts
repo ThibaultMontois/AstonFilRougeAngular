@@ -8,7 +8,7 @@ import { AuthUser } from 'src/app/models/auth-user.model';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() authUser!: AuthUser;
+  @Input() authUser!: AuthUser | null;
   @Output() logOutEmitter: EventEmitter<Boolean> = new EventEmitter<Boolean>();
 
   constructor() {

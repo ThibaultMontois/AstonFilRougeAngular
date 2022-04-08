@@ -8,8 +8,8 @@ import { AuthUser } from '../models/auth-user.model';
 })
 export class FakeAuthUserService {
 
-  private authUser!: AuthUser;
-  private userSubject: BehaviorSubject<AuthUser>;
+  private authUser: AuthUser | null;
+  private userSubject: BehaviorSubject<AuthUser | null>;
 
   constructor() {
     const data: string | null = localStorage.getItem('auth_user');
@@ -17,12 +17,12 @@ export class FakeAuthUserService {
       this.authUser = JSON.parse(data); 
     }
     else {
-      this.login('','');
+      this.authUser = null;
     }
-    this.userSubject = new BehaviorSubject<AuthUser>(this.authUser);
+    this.userSubject = new BehaviorSubject<AuthUser | null>(this.authUser);
   }
 
-  get user(): AuthUser {
+  get user(): AuthUser | null {
     return this.userSubject.value;
   }
 
@@ -42,17 +42,18 @@ export class FakeAuthUserService {
         this.authUser = new AuthUser(email, Role.SuperAdmin, new Date(Date.now() + 1800000));
         break;
       default:
-        this.authUser = new AuthUser();
+        this.authUser = null;
         break;
     }
 
-    localStorage.setItem('auth_user', JSON.stringify(this.authUser));
+    if (this.authUser) localStorage.setItem('auth_user', JSON.stringify(this.authUser));
 
     return of<AuthUser | null>(this.authUser);
   }
 
   logout(): void {
-    this.login('','');
+    localStorage.removeItem('auth_user');
+    this.authUser = null;
     this.userSubject.next(this.authUser);
   }
 }

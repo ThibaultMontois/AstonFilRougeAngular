@@ -14,12 +14,12 @@ export class JWT {
 
 export class AuthUser {
     email: string | null;
-    role: Role;
+    role: Role | null;
     exp: Date | null;
 
-    constructor(email?: string | null, role?: Role, exp?: Date | null) {
+    constructor(email?: string | null, role?: Role | null, exp?: Date | null) {
         this.email = email ?? null;
-        this.role = role ?? Role.Guest;
+        this.role = role ?? null;
         this.exp = exp ?? null;
     }
 }
