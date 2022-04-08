@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthUser } from './models/auth.model';
+import { AuthUser } from './models/auth-user.model';
+import { AuthUserService } from './services/auth-user.service';
 import { FakeAuthUserService } from './services/fake-auth-user.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { FakeAuthUserService } from './services/fake-auth-user.service';
 export class AppComponent {
   title = 'AstonFilRougeAngular';
 
-  authUser: AuthUser;
+  authUser: AuthUser | null;
 
   constructor(private authUserService: FakeAuthUserService) {
     this.authUser = this.authUserService.user;

@@ -11,7 +11,7 @@ export class User {
     email: string;
     phoneNumber: string;
     birthDate: Date | null;
-    role: Role;
+    role: Role | null;
     job: string | null;
     club: Club | null; // not null ??
     description: string | null;
@@ -19,7 +19,7 @@ export class User {
     updateDate: Date | null;
     avatar: string | null;
 
-    constructor(id: number, firstName: string, lastName: string, email: string, phoneNumber: string, address?: Address, birthDate?: Date | null, role?: Role, club?: Club | null, job?: string | null, description?: string | null, avatar?: string | null) {
+    constructor(id: number, firstName: string, lastName: string, email: string, phoneNumber: string, address?: Address, birthDate?: Date | null, role?: Role | null, club?: Club | null, job?: string | null, description?: string | null, avatar?: string | null) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -27,7 +27,7 @@ export class User {
         this.phoneNumber = phoneNumber;
         this.address = address ?? null;
         this.birthDate = birthDate ?? null;
-        this.role = role ?? Role.Guest;
+        this.role = role ?? null;
         this.club = this.role === Role.Member || Role.Manager ? club ?? null : null;
         this.job = this.role === Role.Coach || Role.Manager ? job ?? null : null;
         this.description = this.role === Role.Coach ? description ?? null : null;
