@@ -3,6 +3,5 @@ export enum Role {
     Member = 1 << 0,
     Coach = 1 << 1,
     Manager = 1 << 2,
-    SuperAdmin = 1 << 3,
-    All = ~(~0 << 4) // == ~(1 << 4) ? Utile ??
+    SuperAdmin = 1 << 3
 }

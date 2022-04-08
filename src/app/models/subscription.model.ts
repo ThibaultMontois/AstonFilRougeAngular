@@ -9,18 +9,17 @@ export class Subscription {
     price: number;
     billingPeriod: BillingPeriod;
     startDate: Date;
-    endCommitmentDate: Date;
+    endCommitmentDate: Date | null;
     endDate: Date | null;
 
-    constructor(id: number, clientId: number, clubId: number, price: number, billingPeriod: BillingPeriod) {
+    constructor(id: number, clientId: number, clubId: number, price: number, billingPeriod: BillingPeriod, endCommitmentDate?: Date | null) {
         this.id = id;
         this.clientId = clientId;
         this.clubId = clubId;
         this.price = price;
         this.billingPeriod = billingPeriod;
         this.startDate = new Date();
-        this.endCommitmentDate = new Date();
-        this.endCommitmentDate.setFullYear(this.startDate.getFullYear() + 1);
+        this.endCommitmentDate = endCommitmentDate ?? null;
         this.endDate = null;
     }
 }
