@@ -42,7 +42,6 @@ import { CoursesPageComponent } from './components/courses-page/courses-page.com
     teamcardsComponent,
     CarouselComponent,
     TeamComponent,
-    CoachCardsComponent,
     ClublistComponent,
     ClubComponent,
     CoursesPageComponent
