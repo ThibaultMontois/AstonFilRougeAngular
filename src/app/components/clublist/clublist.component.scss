@@ -6,35 +6,28 @@ div.cardList{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    align-items: center
+    align-items: center;
+    margin-top: 20px;
 }
-div.cardList div.card{
+div.card{
     display: inline-block;
-    width: 80%;
+    width: 40%;
     height: auto;
-    border: 0px;
+    gap: 20px;
     -webkit-box-shadow: 5px 5px 15px 5px #cfcfcf; 
     box-shadow: 5px 5px 15px 5px #cfcfcf;
 }
-div.cardList div.card + div.card{
-   margin-top:15px;
-}
-div.cardList div.card div{
-    display: block;
-    width: 100%;
-}
-div.cardList div.card div.cover{
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    height: 100px;
-    width: 100%;
+
+
+div.cover{
+
+    width: 300px;
 }
 
-div.cardList div.card div.club{
+div.club{
     display: block;
     background-repeat: no-repeat;
     background-size: auto;
@@ -47,16 +40,16 @@ div.cardList div.card div.club{
     bottom: 50px;
     left:100px;
 }
-div.cardList div.card div.detailList{
+div.detailList{
     position: relative;
-    bottom: 5px;
     width: 100%;
 }
-div.cardList div.card .description{
+.description{
+    margin-top: 10px;
     font-weight: bold;
     text-align: center;
 }
-div.cardList div.card .adresse{
+.adresse{
     text-align: center;
     color: gray;
     margin-bottom: 10px;
