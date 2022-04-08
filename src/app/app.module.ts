@@ -21,6 +21,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { teamcardsComponent } from './components/team-cards/team-cards.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
 import { TeamComponent } from './components/team/team.component';
+import { TarifComponent } from './components/tarif/tarif.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TeamComponent } from './components/team/team.component';
     RegistrationComponent,
     teamcardsComponent,
     CarouselComponent,
-    TeamComponent
+    TeamComponent,
+    TarifComponent
   ],
   imports: [
     BrowserModule,
