@@ -41,8 +41,7 @@ import { CoursesPageComponent } from './components/courses-page/courses-page.com
     RegistrationComponent,
     teamcardsComponent,
     CarouselComponent,
-    TeamComponent,
-    CoachCardsComponent,
+    TeamComponent,    
     ClublistComponent,
     ClubComponent,
     CoursesPageComponent
