@@ -18,10 +18,12 @@ import { AuthUserService } from './services/auth-user.service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { RegistrationComponent } from './components/registration/registration.component';
-import { CoachCardsComponent } from './components/coach-cards/coach-cards.component';
+import { teamcardsComponent } from './components/team-cards/team-cards.component';
 import { CarouselComponent } from './components/home/carousel/carousel.component';
 import { ClublistComponent } from './components/clublist/clublist.component';
 import { ClubComponent } from './components/clublist/club/club.component';
+import { TeamComponent } from './components/team/team.component';
+import { CoursesPageComponent } from './components/courses-page/courses-page.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +39,13 @@ import { ClubComponent } from './components/clublist/club/club.component';
     UserLoginComponent,
     ForgetPasswordComponent,
     RegistrationComponent,
-    CoachCardsComponent,
+    teamcardsComponent,
     CarouselComponent,
+    TeamComponent,
+    CoachCardsComponent,
     ClublistComponent,
     ClubComponent,
-
+    CoursesPageComponent
   ],
   imports: [
     BrowserModule,
