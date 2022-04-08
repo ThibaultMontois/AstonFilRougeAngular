@@ -1,0 +1,72 @@
+.c_container{
+    padding: var(--default-padding);
+}
+
+div.cardList{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center
+}
+div.cardList div.card{
+    display: inline-block;
+    max-width: 80vh;
+    border: 0px;
+    -webkit-box-shadow: 5px 5px 15px 5px #cfcfcf; 
+    box-shadow: 5px 5px 15px 5px #cfcfcf;
+}
+div.cardList div.card + div.card{
+    margin-top:15px;
+}
+div.cardList div.card div{
+    display: block;
+    width: 100%;
+}
+div.cardList div.card div.cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100%;
+}
+
+div.cardList div.card div.club{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px !important;
+    height: 100px;  
+    border-radius: 50%;
+    background: round;
+    position: relative;
+    bottom: 50px;
+    left:100px;
+}
+div.cardList div.card div.detailList{
+    position: relative;
+    bottom: 25px;
+    width: 100%;
+}
+div.cardList div.card .identity{
+    font-weight: bold;
+    text-align: center;
+}
+div.cardList div.card .job{
+    text-align: center;
+    color: gray;
+    margin-bottom: 10px;
+}
+div.cardList div.card .description{
+    padding: 0px 10px 0px 10px;
+}
+
+@media screen and (max-width:80vh) {
+    div.cardList{
+        flex-direction: column; 
+        align-items: center 
+    }
+}

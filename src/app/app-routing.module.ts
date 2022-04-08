@@ -9,6 +9,8 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { TeamComponent } from './components/team/team.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
+import { ClublistComponent } from './components/clublist/clublist.component';
+import { ClubComponent } from './components/clublist/club/club.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'privacy-statement', component: PrivacyStatementComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
+  { path: 'club', component: ClubComponent },
+  { path: 'clublist', component: ClublistComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
