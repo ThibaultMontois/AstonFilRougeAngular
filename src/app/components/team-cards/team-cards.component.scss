@@ -64,26 +64,6 @@ div.cardList div.card .job{
 div.cardList div.card .description{
     padding: 0px 10px 0px 10px;
 }
-div.cardList .link{
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 22px;
-
-    text-decoration: none;
-    border-radius: 5px;
-}
-div.cardList a, div.cardList a:hover, div.cardList a:visited{
-
-    text-decoration: none;
-
-    font-weight: bold;
-    color: var(--clr-tertiary);
-}   
-div.cardList a:hover{
-    text-decoration: dashed !important;
-    color:#B2FC62 !important;
-}
 
 @media screen and (max-width:700px) {
     div.cardList{
