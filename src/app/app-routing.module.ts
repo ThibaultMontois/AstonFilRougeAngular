@@ -8,6 +8,7 @@ import { PrivacyStatementComponent } from './components/privacy-statement/privac
 import { RegistrationComponent } from './components/registration/registration.component';
 import { TeamComponent } from './components/team/team.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
+import { TestComponent } from './components/test/test.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'privacy-statement', component: PrivacyStatementComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
+  { path: 'test', component: TestComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
