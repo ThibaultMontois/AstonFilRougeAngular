@@ -1,0 +1,61 @@
+<div class="container">
+    <h1>&Eacute;diter le compte</h1>
+    <table class="tftable" border="1">
+        <thead>
+            <tr>
+                <th colspan="4">Informations générales</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="nom">Nom*</label>
+                    <input type="text" name="nom" value="" required placeholder="Obligatoire">
+                </td>
+                <td>
+                    <label for="prenom">Prénom*</label>
+                    <input type="text" name="prenom" value="" required placeholder="Obligatoire">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adresse">Adresse*</label>
+                    <input type="text" name="adresse" value="" placeholder="Obligatoire">
+                </td>
+                <td>
+                    <label for="cplmtAdresse">Complément d'adresse</label>
+                    <input type="text" name="cplmtAdresse" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="codepostal">Code postal*</label>
+                    <input type="number" name="codepostal" minlength="5" maxlength="5" value="" required
+                        placeholder="Obligatoire">
+                </td>
+                <td>
+                    <label for="commune">Commune*</label>
+                    <input type="text" name="commune" value="" required placeholder="Obligatoire">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">E-mail*</label>
+                    <input type="email" name="email" minlength="7" maxlength="2000" value="" required
+                        placeholder="Obligatoire">
+                </td>
+                <td>
+                    <label for="phone">Téléphone*</label>
+                    <input type="phone" name="phone" minlength="10" maxlength="10" value="" required
+                        placeholder="Obligatoire">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="submit" value="Enregistrer" class="btn info" />
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

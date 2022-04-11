@@ -27,6 +27,8 @@ import { TarifComponent } from './components/tarif/tarif.component';
 import { CoursesPageComponent } from './components/courses-page/courses-page.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
+import { DeleteUserComponent } from './components/admin/delete-user/delete-user.component';
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { UserListComponent } from './components/admin/user-list/user-list.compon
     ClubComponent,
     CoursesPageComponent,
     AdminComponent,
-    UserListComponent
+    UserListComponent,
+    DeleteUserComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
