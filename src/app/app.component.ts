@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthUser } from './models/auth-user.model';
 import { AuthUserService } from './services/auth-user.service';
-import { FakeAuthUserService } from './services/fake-auth-user.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,7 @@ export class AppComponent {
 
   authUser: AuthUser | null;
 
-  constructor(private authUserService: FakeAuthUserService) {
+  constructor(private authUserService: AuthUserService) {
     this.authUser = this.authUserService.user;
   }
 

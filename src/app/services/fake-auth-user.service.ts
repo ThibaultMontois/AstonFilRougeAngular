@@ -30,16 +30,16 @@ export class FakeAuthUserService {
 
     switch (email + ' ' + password) {
       case 'member@example.com member':
-        this.authUser = new AuthUser(email, Role.Member, new Date(Date.now() + 1800000));
+        this.authUser = new AuthUser(email, Role.Member);
         break;
       case 'coach@example.com coach':
-        this.authUser = new AuthUser(email, Role.Coach, new Date(Date.now() + 1800000));
+        this.authUser = new AuthUser(email, Role.Coach);
         break;
       case 'manager@example.com manager':
-        this.authUser = new AuthUser(email, Role.Manager, new Date(Date.now() + 1800000));
+        this.authUser = new AuthUser(email, Role.Manager);
         break;
       case 'super.admin@example.com superadmin':
-        this.authUser = new AuthUser(email, Role.SuperAdmin, new Date(Date.now() + 1800000));
+        this.authUser = new AuthUser(email, Role.SuperAdmin);
         break;
       default:
         this.authUser = null;
