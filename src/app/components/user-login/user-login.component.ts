@@ -2,9 +2,8 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthUser } from 'src/app/models/auth-user.model';
+import { AuthUser, JWT } from 'src/app/models/auth-user.model';
 import { AuthUserService } from 'src/app/services/auth-user.service';
-import { FakeAuthUserService } from 'src/app/services/fake-auth-user.service';
 
 @Component({
   selector: 'app-user-login',
@@ -15,7 +14,7 @@ export class UserLoginComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private fb: FormBuilder, private location: Location, private authUserService: FakeAuthUserService, private router: Router) { }
+  constructor(private fb: FormBuilder, private location: Location, private authUserService: AuthUserService, private router: Router) { }
 
   ngOnInit(): void {
     this.formGroup = this.fb.group({
@@ -36,10 +35,14 @@ export class UserLoginComponent implements OnInit {
     const email: string = this.formGroup.value.email;
     const password: string = this.formGroup.value.password;
 
-    this.authUserService.login(email, password).subscribe((user: AuthUser | null) => {
-      if (user) this.router.navigate(['']).then(() => {
-        window.location.reload();
-      });
+    this.authUserService.login(email, password).subscribe((response: any) => {
+      if (response) {
+        const jwt: JWT = new JWT(response.token, response.expiresAt);
+        const authUser: AuthUser | null = jwt.getAuthUser();
+        localStorage.setItem('jwt_token', JSON.stringify(jwt));
+        localStorage.setItem('auth_user', JSON.stringify(authUser));
+        this.router.navigate(['']).then(() => { window.location.reload(); });
+      }
     });
   }
 

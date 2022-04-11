@@ -24,7 +24,6 @@ import { ClublistComponent } from './components/clublist/clublist.component';
 import { ClubComponent } from './components/clublist/club/club.component';
 import { TeamComponent } from './components/team/team.component';
 import { CoursesPageComponent } from './components/courses-page/courses-page.component';
-import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +44,7 @@ import { TestComponent } from './components/test/test.component';
     TeamComponent,
     ClublistComponent,
     ClubComponent,
-    CoursesPageComponent,
-    TestComponent
+    CoursesPageComponent
   ],
   imports: [
     BrowserModule,

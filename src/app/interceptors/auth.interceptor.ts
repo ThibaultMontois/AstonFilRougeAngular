@@ -11,7 +11,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
-    const jwt: JWT | null = this.authUserService.getToken();
+    const jwt: JWT | null = this.authUserService.token;
 
     if (jwt) {
       const req = request.clone({
