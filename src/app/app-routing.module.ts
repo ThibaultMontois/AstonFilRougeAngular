@@ -10,6 +10,9 @@ import { TarifComponent } from './components/tarif/tarif.component';
 import { TeamComponent } from './components/team/team.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
+import { ClubComponent } from './components/clublist/club/club.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserListComponent } from './components/admin/user-list/user-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,12 +22,19 @@ const routes: Routes = [
       { path: '', component: UserLoginComponent }
     ]
   },
+  {
+    path: 'admin', children: [
+      { path: 'userList', component: UserListComponent },
+      { path: '', component: AdminComponent }
+    ]
+  },
   { path: 'team', component: TeamComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'privacy-statement', component: PrivacyStatementComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
   { path: 'tarif', component: TarifComponent },
+  { path: 'clubList', component: ClubComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

@@ -1,0 +1,140 @@
+.adminHeader{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn{
+    margin:5px;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    -moz-border-radius: 4px;
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    word-break: break-word;
+
+    background-color: #333333;
+    color: #fff;
+}   
+.btn:hover{
+    background-color: #fff;
+    color: #333333;
+}
+
+.btn.danger{
+    background-color: #ea2222 !important;
+    color: #fff;
+}
+
+.btn.success{
+    background-color: #0fdf43 !important;
+    color: #fff;
+}
+
+.btn.info{
+    background-color: #003eff !important;
+    color: #fff;
+}
+
+.container{
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-around;
+    word-break: break-word;
+}
+
+.tftable {
+    font-size: 12px;
+    color: #333333;
+    width: 100%;
+    border-width: 2px;
+    border-color: #007BFF;
+    border-collapse: collapse;
+}
+
+.tftable th {
+    font-size: 12px;
+    background-color: #007BFF;
+    border-width: 2px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #007BFF;
+    text-align: left;
+    padding: 10px !important;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tftable tr {
+    background-color: #ffffff;
+}
+
+.tftable td {
+    font-size: 12px;
+    border-width: 2px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #007BFF;
+    vertical-align: middle;
+}
+
+.tftable tr:hover {
+    background-color: #d4e3e5;
+}
+
+.tabList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-around;
+    word-break: break-word;
+    padding: 5px;
+}
+.tabList .tab:first-child{
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.tabList .tab:last-child{
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-right:1px solid silver;
+}
+.tabList .tab{
+    padding:7px;
+    text-align: center;
+    min-width: 30px;
+    min-height: 30px;
+    cursor: pointer;
+    border-top:1px solid silver;
+    border-bottom:1px solid silver;
+    border-left:1px solid silver;
+}
+.tabList .tab.active{
+    background-color:#3459e6;
+    border-top:1px solid #3459e6;
+    border-bottom:1px solid #3459e6;
+    color:#fff;
+}
