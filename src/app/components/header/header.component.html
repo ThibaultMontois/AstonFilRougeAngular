@@ -40,11 +40,11 @@
             </li>
         </ul>
     </nav>
-    <div class="header__secondary-menu__logout" *ngIf="authUser.role === 0">
+    <div class="header__secondary-menu__logout" *ngIf="!authUser">
         <a class="btn header__sign-in" href="#" routerLink="login">Connexion</a>
         <a class="btn header__sign-on" href="#" routerLink="registration">Inscription</a>
     </div>
-    <div class="header__secondary-menu__login" *ngIf="authUser.role !== 0">
+    <div class="header__secondary-menu__login" *ngIf="authUser && authUser.role != null">
         <ul class="header__menu">
             <li class="header__menu__under">
                 <a class="btn select-title" href="#">Mon compte</a>
