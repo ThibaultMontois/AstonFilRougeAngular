@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { AuthUser, JWT } from '../models/auth.model';
+import { AuthUser, JWT } from '../models/auth-user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,31 +25,13 @@ export class AuthUserService {
     return this.userSubject.value;
   }
 
-  getToken(): JWT | null {
+  get token(): JWT | null {
     const jwt_token: string | null = localStorage.getItem('jwt_token');
     return jwt_token ? JSON.parse(jwt_token) : null;
   }
 
-  login(email: string, password: string): Observable<AuthUser | null> {
-    const data = {
-      email: email,
-      password: password
-    }
-
-    return this.http.post<JWT>(`${this.apiUrl}/authenticate`, data)
-      .pipe(tap(data => console.log(data)))
-      .pipe(map((data: JWT): AuthUser | null => {
-
-        const jwt: JWT = new JWT();
-        Object.assign(jwt, data);
-
-        const authUser: AuthUser | null = jwt.getPayload();
-        if (authUser) {
-          localStorage.setItem('auth_user', JSON.stringify(authUser));
-          localStorage.setItem('jwt_token', JSON.stringify(jwt));
-        }
-        return authUser;
-      }));
+  login(email: string, password: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/authuser/authenticate`, { email: email, password: password });
   }
 
   logout(): void {
