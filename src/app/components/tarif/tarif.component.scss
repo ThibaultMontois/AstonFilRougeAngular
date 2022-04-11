@@ -1,0 +1,88 @@
+/* page container */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding: 18px;
+}
+
+/* table prices */
+table.GeneratedTable {
+    padding: 10px;
+    width: 90%;
+    border:0px;
+    color: #000000;
+}
+
+/* table head*/
+table.GeneratedTable th {
+    padding: 10px !important;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* bg color header */
+table.GeneratedTable tr:first-child th:not(:first-child), table.GeneratedTable tr:nth-child(2n) th{
+    background-color: #007bff;
+}
+
+/* header text format*/
+table.GeneratedTable tr:nth-child(2n) th:first-child {
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* lines tbody even/odd*/
+tbody tr:nth-child(even) {
+    background-color: #e9f0f5;
+}
+/* align left first row */
+tbody td:first-child{
+    text-align: left;
+}
+
+/* cell borders */
+table.GeneratedTable td,
+table.GeneratedTable tr:not(:first-child) th,
+table.GeneratedTable tr th:not(:first-child) {
+    border-width: 2px;
+    border-color: #007bff;
+    border-style: solid;
+    padding: 5px;
+}
+
+/* first cell */
+table.GeneratedTable tr:first-child th:first-child{
+    background-color: var(--clr-primary);
+    border-top:0px solid var(--clr-primary);
+    border-left:0px solid var(--clr-primary);
+}
+/* button buy*/
+table.GeneratedTable button{
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: #ffffff;
+        color: #007bff;
+        border-color: #007bff;
+        cursor: pointer;
+    }
+}
+
+span.checked:before{
+    content: '✓';
+    color: #008829;
+    font-weight: bold;
+}

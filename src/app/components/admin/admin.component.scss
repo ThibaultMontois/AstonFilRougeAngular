@@ -1,0 +1,47 @@
+/* ADMIN PANEL */
+a, a:hover, a:visited{
+  color: var(--clr-secondary);
+}
+h2.panel {
+    margin-top: 25px;
+  }
+  
+  .adminPanel {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    align-content: space-around;
+  }
+  
+  .adminPanel .persoBtn {
+    padding: 2px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    vertical-align: top;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    width: 100px;
+    min-height: 80px;
+    word-break: break-word;
+  }
+  
+  .adminPanel .persoBtn:hover {
+    background-color: rgb(216, 216, 216);
+    cursor: pointer;
+  }
+  
+  .adminPanel .persoBtn + .persoBtn {
+    margin-left: 15px;
+  }
+  
+  
