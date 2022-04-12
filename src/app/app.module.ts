@@ -29,6 +29,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { DeleteUserComponent } from './components/admin/delete-user/delete-user.component';
 import { UserComponent } from './components/user/user.component';
+import { ReservationPageComponent } from './components/reservation-page/reservation-page.component';
+import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
 
 
 @NgModule({
@@ -55,7 +57,9 @@ import { UserComponent } from './components/user/user.component';
     AdminComponent,
     UserListComponent,
     DeleteUserComponent,
-    UserComponent
+    UserComponent,
+    ReservationPageComponent,
+    ReservationFormComponent
   ],
   imports: [
     BrowserModule,
