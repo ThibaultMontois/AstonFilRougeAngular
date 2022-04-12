@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user.model';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-team-cards',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class teamcardsComponent implements OnInit {
 
-  constructor() { }
+  teamList!: User[];
+
+  constructor(private db: DatabaseService) {
+    this.teamList = [];
+  }
 
   ngOnInit(): void {
+    this.db.getUserList().subscribe((response: any) => {
+      console.log(response);
+      // let userList: User[] = response.userList;
+      // let i: number = 0;
+      // let t: number = 0;
+      // while (i < userList.length && t < 10) {
+      //   if (userList[i].role === 2) {
+      //     this.teamList.push(userList[i]);
+      //     t++;
+      //   }
+      // }
+    })
   }
 
 }
