@@ -6,7 +6,7 @@ export class User {
     id: number;
     firstName: string;
     lastName: string;
-    // password
+    password: string;
     address: Address | null;
     email: string;
     phoneNumber: string;
@@ -19,10 +19,11 @@ export class User {
     updateDate: Date | null;
     avatar: string | null;
 
-    constructor(id: number, firstName: string, lastName: string, email: string, phoneNumber: string, address?: Address, birthDate?: Date | null, role?: Role | null, club?: Club | null, job?: string | null, description?: string | null, avatar?: string | null) {
+    constructor(id: number, firstName: string, lastName: string, password: string, email: string, phoneNumber: string, address?: Address, birthDate?: Date | null, role?: Role | null, club?: Club | null, job?: string | null, description?: string | null, avatar?: string | null) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.password = password;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address ?? null;

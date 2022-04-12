@@ -82,7 +82,7 @@ export class RegistrationComponent implements OnInit {
     if (password !== passwordConf) return;
 
     let address: Address = new Address(0, street, zipCode, city, number, complement);
-    let user: User = new User(0, firstName, lastName, email, phoneNumber, address, birthDate, Role.Member);
+    let user: User = new User(0, firstName, lastName, password, email, phoneNumber, address, birthDate, Role.Member);
 
     // TO DO
   }
