@@ -28,7 +28,7 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/address/getall`);
   }
 
-  getAddress(id: number): Observable<any> {
+  getAddressById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/address/get/${id}`);
   }
 
@@ -49,7 +49,7 @@ export class DatabaseService {
     return this.http.get<any>(`${this.apiUrl}/club/getall`);
   }
 
-  getClub(id: number): Observable<any> {
+  getClubById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/club/get/${id}`);
   }
 
@@ -70,7 +70,7 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/course/getall`);
   }
 
-  getCourse(id: number): Observable<any> {
+  getCourseById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/course/get/${id}`);
   }
 
@@ -91,7 +91,7 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/openingday/getall`);
   }
 
-  getOpeningDay(id: number): Observable<any> {
+  getOpeningDayById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/openingday/get/${id}`);
   }
 
@@ -112,7 +112,7 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/reservation/getall`);
   }
 
-  getReservation(id: number): Observable<any> {
+  getReservationById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/reservation/get/${id}`);
   }
 
@@ -133,7 +133,7 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/subscription/getall`);
   }
 
-  getSubscription(id: number): Observable<any> {
+  getSubscriptionById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/subscription/get/${id}`);
   }
 
@@ -154,8 +154,12 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/user/getall`);
   }
 
-  getUser(id: number): Observable<any> {
+  getUserById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/user/get/${id}`);
+  }
+
+  getUserByEmail(email: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/user/get/${email}`);
   }
 
   updateUser(id: number, user: User): Observable<any> {
