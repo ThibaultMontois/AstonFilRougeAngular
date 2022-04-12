@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="user != null">
     <h1>&Eacute;diter le compte</h1>
     <table class="tftable" border="1">
         <thead>
@@ -56,6 +56,6 @@
                 </td>
             </tr>
         </tbody>
-
     </table>
+    <input type="submit" name="submit" value="Supprimer mon compte" class="btn danger" />
 </div>
