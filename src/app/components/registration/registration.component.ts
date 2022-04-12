@@ -84,10 +84,10 @@ export class RegistrationComponent implements OnInit {
 
     let address: Address = new Address(0, street, zipCode, city, number, complement);
     this.db.createAddress(address).subscribe((response: any) => {
-      let addressId: number = response.addressId;
+      let addressId: number = response.AddressId;
       let user: User = new User(0, firstName, lastName, password, email, phoneNumber, Role.Member, addressId, birthDate);
       this.db.createUser(user).subscribe((response: any) => {
-        if (response.userId) this.router.navigate(['user'], response.userId);
+        if (response && response.userId) this.router.navigate(['']);
       });
     });
   }
