@@ -16,7 +16,7 @@ export class User {
     description: string | null;
     creationDate: Date;
     updateDate: Date | null;
-    avatar: string;
+    avatar: string | null;
 
     constructor(id: number, firstName: string, lastName: string, password: string, email: string, phoneNumber: string, role: Role, addressId?: number, birthDate?: Date | null, club?: Club | null, job?: string | null, description?: string | null, avatar?: string | null) {
         this.id = id;
