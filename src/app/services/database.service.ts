@@ -67,11 +67,12 @@ export class DatabaseService {
   }
 
   getCourseList(): Observable<any> {
+
     return this.http.get(`${this.apiUrl}/course/getall`);
   }
 
   getCourseListByDate(date : Date): Observable<any>{
-    return this.http.get(`${this.apiUrl}/course/getall/${date}`);
+    return this.http.get(`${this.apiUrl}/course/getallbydate/${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`);
   }
 
   getCourseById(id: number): Observable<any> {
