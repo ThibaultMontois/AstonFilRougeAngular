@@ -46,7 +46,7 @@ img {
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: var(--clr-primary);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -56,9 +56,9 @@ img {
 }
 
 .text a.button{
-    background-color: #007bff;
+    background-color: var(--clr-quaternary);
     border: none;
-    color: white;
+    color: var(--clr-primary);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -74,7 +74,7 @@ img {
 }
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: var(--clr-primary);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
