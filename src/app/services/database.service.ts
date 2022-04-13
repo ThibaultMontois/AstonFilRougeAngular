@@ -155,11 +155,11 @@ export class DatabaseService {
   }
 
   getUserById(id: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/user/get/${id}`);
+    return this.http.get(`${this.apiUrl}/user/getbyid/${id}`);
   }
 
   getUserByEmail(email: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/user/get/${email}`);
+    return this.http.get(`${this.apiUrl}/user/getbyemail/${email}`);
   }
 
   updateUser(id: number, user: User): Observable<any> {
