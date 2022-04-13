@@ -26,7 +26,8 @@ export class ReservationFormComponent implements OnInit {
   }
 
   getCourseList(): void {
-    this.dbService.getCourseList().subscribe(courseList => this.courseList);
+    let now: Date = new Date();
+    this.dbService.getCourseListByDate(now).subscribe(courseList => this.courseList);
 
   }
 
