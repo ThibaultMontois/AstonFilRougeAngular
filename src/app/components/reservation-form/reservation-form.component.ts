@@ -41,23 +41,22 @@ export class ReservationFormComponent implements OnInit {
   onSubmit(): void {
 
 
-    if (this.courseList != null) {
-      const selectedCourse: number = this.formGroup.value.selectedId;
-      let courseId: number = this.courseList[selectedCourse].id;
-      console.log(selectedCourse + courseId);
-      let user: User;
+    let selectedCourse: number = this.formGroup.value.selectedId;
+    let user: User;
 
-      if (this.authUser?.email != null) {
-        this.dbService.getUserByEmail(this.authUser.email).subscribe(client => {
-          console.log(selectedCourse);
-          user = client;
-          let resa: Reservation = new Reservation(0, user.id, courseId);
+    if (this.authUser?.email != null) {
+
+      this.dbService.getUserByEmail(this.authUser.email).subscribe(client => {
+        console.log(selectedCourse);
+        user = client;
+        let resa: Reservation = new Reservation(0, user.id, selectedCourse);
+        console.log(resa);
+
+        this.dbService.createReservation(resa).subscribe((response: any) => {
           console.log(resa);
-          this.dbService.createReservation(resa).subscribe((response: any) => {
-            this.router.navigate(['../reservation'])
-          });
+          this.router.navigate(['../reservation'])
         });
-      }
+      });
     }
   }
 
