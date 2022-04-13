@@ -16,8 +16,9 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class ReservationFormComponent implements OnInit {
 
   formGroup!: FormGroup;
-  private courseList?: Course[];
+  courseList?: Course[];
   private authUser?: AuthUser | null = this.authService.user;
+  
   constructor(private fb: FormBuilder, private dbService: DatabaseService, private authService: AuthUserService, private router: Router) { }
 
   ngOnInit(): void {
