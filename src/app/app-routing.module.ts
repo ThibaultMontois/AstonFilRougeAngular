@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'privacy-statement', component: PrivacyStatementComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
-  { path: 'tarif', component: TarifComponent },
+  { path: 'prices', component: TarifComponent },
   { path: 'clubList', component: ClubComponent },
   { path: '**', component: NotFoundComponent }
 ];

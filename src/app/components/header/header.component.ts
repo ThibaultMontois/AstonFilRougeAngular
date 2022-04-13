@@ -21,13 +21,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.db.getClubList().subscribe((response: any) => {
-      console.log(response);
       let clubList: Club[] = response.clubList;
       let i: number = 0;
       let t: number = 0;
       while (t < clubList.length) {
         this.clubList.push(clubList[i]);
-        console.log(clubList[i]);
         t++;
         i++;
         if(t==3){

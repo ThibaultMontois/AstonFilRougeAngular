@@ -12,6 +12,6 @@ export class Reservation {
         this.clientId = clientId;
         this.courseId = courseId;
         this.status = status ?? ReservationStatus.Requested;
-        this.requestDate = new Date();
+        this.requestDate = new Date(Date.now());
     }
 }

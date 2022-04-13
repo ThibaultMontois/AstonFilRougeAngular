@@ -1,13 +1,15 @@
 .btn.danger{
-    background-color: #f44336;
-    border-color: #f44336;
-    color: #fff;
+    background-color: var(--clr-senary);
+    border-color: var(--clr-senary);
+    color: var(--clr-primary);
     padding: 5px;
     float: right;
 }
 
 .container{
-    padding: 10px;
+    position: relative;
+    top: -100px;
+    padding: 50px;
 }
 h1{
     margin-bottom: 15px;
@@ -16,7 +18,7 @@ p.info{
     margin-left:25px;
 }
 p:not(.info) > p.info{
-    color:red;
+    color: var(--clr-septenary);
 }
 .email, .phone{
     display: flex;

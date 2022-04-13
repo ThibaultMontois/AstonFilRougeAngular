@@ -17,27 +17,28 @@
     display: inline-block;
     word-break: break-word;
 
-    background-color: #333333;
-    color: #fff;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    text-shadow: 0 0 10px var(--clr-secondary);
 }   
 .btn:hover{
-    background-color: #fff;
-    color: #333333;
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
 }
 
 .btn.danger{
-    background-color: #ea2222 !important;
-    color: #fff;
+    background-color: var(--clr-senary) !important;
+    color: var(--clr-primary);
 }
 
 .btn.success{
-    background-color: #0fdf43 !important;
-    color: #fff;
+    background-color: var(--clr-tertiary) !important;
+    color: var(--clr-primary);
 }
 
 .btn.info{
-    background-color: #003eff !important;
-    color: #fff;
+    background-color: var(--clr-quaternary) !important;
+    color: var(--clr-primary);
 }
 
 .container{
@@ -58,29 +59,29 @@
 
 .tftable {
     font-size: 12px;
-    color: #333333;
+    color: var(--clr-secondary);
     width: 100%;
     border-width: 2px;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
     border-collapse: collapse;
 }
 
 .tftable th {
     font-size: 12px;
-    background-color: #007BFF;
+    background-color: var(--clr-quaternary);
     border-width: 2px;
     padding: 8px;
     border-style: solid;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
     text-align: left;
     padding: 10px !important;
-    color: #fff;
+    color: var(--clr-primary);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .tftable tr {
-    background-color: #ffffff;
+    background-color: var(--clr-primary);
 }
 
 .tftable td {
@@ -88,7 +89,7 @@
     border-width: 1px;
     padding: 8px;
     border-style: solid;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
     vertical-align: middle;
 }
 
@@ -134,8 +135,8 @@
     border-left:1px solid silver;
 }
 .tabList .tab.active{
-    background-color:#3459e6;
-    border-top:1px solid #3459e6;
-    border-bottom:1px solid #3459e6;
-    color:#fff;
+    background-color: var(--clr-quaternary);
+    border-top:1px solid var(--clr-quaternary);
+    border-bottom:1px solid var(--clr-quaternary);
+    color: var(--clr-primary);
 }
