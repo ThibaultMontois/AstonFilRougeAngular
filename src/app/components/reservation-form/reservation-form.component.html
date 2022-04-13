@@ -8,7 +8,10 @@
                     {{course.title}}
                    </ng-option> 
             </ng-select>
-            <input type="date" class="resa-form_form_date" formControlName="requestDate">
+            <div class="form__btns">
+                <button class="btn registration__cancel" (click)="onCancel()">Annuler</button>
+                <button class="btn registration__valid" type='submit' [disabled]="formGroup.invalid">Valider</button>
+            </div>
         </form>
     </div>
 </div>
