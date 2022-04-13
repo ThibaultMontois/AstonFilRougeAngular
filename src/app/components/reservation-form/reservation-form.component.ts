@@ -23,11 +23,16 @@ export class ReservationFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCourseList();
+    this.formGroup = this.fb.group({
+    })
   }
 
   getCourseList(): void {
-    let now: Date = new Date();
-    this.dbService.getCourseListByDate(now).subscribe(courseList => this.courseList);
+    let now = new Date();
+    this.dbService.getCourseListByDate(now).subscribe(list =>{
+      console.log(list)
+      this.courseList=list.courseList
+    });
 
   }
 
@@ -41,14 +46,16 @@ export class ReservationFormComponent implements OnInit {
 
         user = client
         let resa: Reservation = new Reservation(0, user.id, selectedCourse);
-        this.dbService.createReservation(resa);
+        this.dbService.createReservation(resa).subscribe( (response : any) =>{
+          this.router.navigate(['../reservation'])
+        });
       });
     }
    
   }
 
   onCancel(): void {
-    this.router.navigate(['']);
+    this.router.navigate(['../reservation']);
   }
 }
 
