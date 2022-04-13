@@ -52,8 +52,14 @@
                         <li class="btn">
                             <a href="/user">Mes Infos</a>
                         </li>
-                        <li class="btn">
-                            <a href="#">Chat</a>
+                        <li class="btn" *ngIf="authUser && (authUser.role == 8 || authUser.role == 4 )">
+                            <a href="/admin">Administration</a>
+                        </li>
+                        <li class="btn" *ngIf="authUser && (authUser.role == 8 || authUser.role == 4 )">
+                            <a href="/admin">Statistiques</a>
+                        </li>
+                        <li class="btn" *ngIf="authUser && (authUser.role == 1 || authUser.role == 2)">
+                            <a href="/#">Mon planning</a>
                         </li>
                     </ul>
             </li>
