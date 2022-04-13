@@ -1,3 +1,10 @@
 <div class="reservation-page">
-    <h1 *ngIf="user">{{ user!.firstName }}</h1>
+    <h1 *ngIf="user">Réservations de {{ user.firstName }} {{ user.lastName }}</h1>
+    <ul class="reservation-page__reservationList" *ngIf="resaList.length > 0">
+        <li *ngFor="let resa of resaList; let index = index">
+            <p *ngIf="courseList[index] && clubList[index] && coachList[index]">
+                 {{ courseList[index].date | date: 'fullDate': '+0200': 'fr' | titlecase }} de {{ courseList[index].startHour | date: 'hh:mm' }} à {{ courseList[index].endHour | date: 'hh:mm' }} : Cour de {{ courseList[index].title }} au club de {{ clubList[index].name }} avec {{ coachList[index].firstName }} {{ coachList[index].lastName }}
+            </p>
+        </li>
+    </ul>
 </div>
