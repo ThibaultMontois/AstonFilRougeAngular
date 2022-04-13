@@ -1,5 +1,4 @@
 import { Role } from "../enums/role.enum";
-import { Club } from "./club.model";
 
 export class User {
     id: number;
