@@ -1,17 +1,14 @@
 <div class="resa-form">
-    <h1>Reservation</h1>
-    <div class="resa-form_form">
-        <form class="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()" >
-            <select formControlName="selectedCourse" class="courseSelect">
-                   <option *ngFor = "let course of courseList"
-                   [value]="course.id">
-                    {{course.title}} {{course.date}}
-                   </option> 
-            </select>
-            <div class="form__btns">
-                <button class="btn registration__cancel" (click)="onCancel()">Annuler</button>
-                <button class="btn registration__valid" type='submit' [disabled]="formGroup.invalid">Valider</button>
-            </div>
-        </form> 
-    </div>
+    <h1>Réservation</h1>
+    <form class="resa-form__form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <select formControlName="selectedCourseId" class="courseSelect">
+            <option *ngFor="let course of courseList" [value]="course.id">
+                {{ course.title }} le {{ course.date | date: 'fullDate': '+0200': 'fr' | titlecase }} de {{ course.startHour | date: 'hh:mm' }} à {{ course.endHour | date: 'hh:mm' }}
+            </option>
+        </select>
+        <div class="resa-form__form__btns">
+            <button class="btn resa-form__cancel" (click)="onCancel()">Annuler</button>
+            <button class="btn resa-form__valid" type='submit' [disabled]="formGroup.invalid">Valider</button>
+        </div>
+    </form>
 </div>

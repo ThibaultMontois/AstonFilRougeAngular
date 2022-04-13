@@ -1,7 +1,7 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthUser } from 'src/app/models/auth-user.model';
 import { Course } from 'src/app/models/course.model';
 import { Reservation } from 'src/app/models/reservation.model';
 import { User } from 'src/app/models/user.model';
@@ -16,15 +16,18 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class ReservationFormComponent implements OnInit {
 
   formGroup!: FormGroup;
-  courseList?: Course[];
-  private authUser?: AuthUser | null = this.authService.user;
 
-  constructor(private fb: FormBuilder, private dbService: DatabaseService, private authService: AuthUserService, private router: Router) { }
+  user!: User;
+  courseList: Course[];
+
+  constructor(private fb: FormBuilder, private dbService: DatabaseService, private authService: AuthUserService, private router: Router, private location: Location) {
+    this.courseList = [];
+  }
 
   ngOnInit(): void {
     this.getCourseList();
     this.formGroup = this.fb.group({
-      selectedCourse: ['', [
+      selectedCourseId: ['', [
         Validators.required
       ]]
     })
@@ -32,36 +35,41 @@ export class ReservationFormComponent implements OnInit {
 
   getCourseList(): void {
     let now = new Date();
-    this.dbService.getCourseListByDate(now).subscribe(list => {
-      this.courseList = list.courseList;
+    this.dbService.getCourseListByDate(now).subscribe((list: any) => {
+      list.courseList.forEach((c: any) => {
+        this.courseList.push(new Course(c.id, c.type, c.date, c.startHour, c.endHour, c.status, c.clubId, c.coachId, c.limit, c.title, c.description));
+      })
     });
-
   }
 
   onSubmit(): void {
+    if (this.formGroup.invalid) return;
 
+    const selectedCourseId: number = this.formGroup.value.selectedCourseId;
+    const email: string | null = this.authService.user!.email;
 
-    let selectedCourse: number = this.formGroup.value.selectedId;
-    let user: User;
-
-    if (this.authUser?.email != null) {
-
-      this.dbService.getUserByEmail(this.authUser.email).subscribe(client => {
-        console.log(selectedCourse);
-        user = client;
-        let resa: Reservation = new Reservation(0, user.id, selectedCourse);
-        console.log(resa);
-
-        this.dbService.createReservation(resa).subscribe((response: any) => {
-          console.log(resa);
-          this.router.navigate(['../reservation'])
-        });
-      });
+    if (email) {
+      this.GetUser(email);
+      setTimeout(() => { this.CreateReservation(this.user, selectedCourseId) }, 400);
     }
   }
 
+  GetUser(email: string): void {
+    this.dbService.getUserByEmail(email).subscribe((response: any) => {
+      let u = response.user;
+      this.user = new User(u.id, u.firstName, u.lastName, u.password, u.email, u.phoneNumber, u.role, u.addressId, u.birthDate, u.clubId, u.job, u.description, u.avatarUrl, u.creationDate, u.updateDate);
+    });
+  }
+
+  CreateReservation(user: User, courseId: number): void {
+    let resa: Reservation = new Reservation(0, user.id, courseId, 2);
+    this.dbService.createReservation(resa).subscribe((response: any) => {
+      if (response && response.reservationId) this.location.back();
+    });
+  }
+
   onCancel(): void {
-    this.router.navigate(['../reservation']);
+    this.location.back();
   }
 }
 

@@ -1,4 +1,9 @@
 /* ADMIN PANEL */
+.admin {
+  position: relative;
+  top: -150px;
+  padding: 50px;
+}
 a, a:hover, a:visited{
   color: var(--clr-secondary);
 }

@@ -3,23 +3,23 @@
 }
 .tftable {
     font-size: 12px;
-    color: #333333;
+    color: var(--clr-secondary);
     width: 100%;
     border-width: 1px;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
     border-collapse: collapse;
 }
 
 .tftable th {
     font-size: 12px;
-    background-color: #007BFF;
+    background-color: var(--clr-quaternary);
     border-width: 2px;
     padding: 8px;
     border-style: solid;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
     text-align: left;
     padding: 10px !important;
-    color: #fff;
+    color: var(--clr-primary);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -31,17 +31,17 @@
 .tftable tr td:first-child {
     border-left-width: 1px;
     border-style: solid;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
 }
 .tftable tr td:last-child {
     border-right-width: 1px;
     border-style: solid;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
 }
 .tftable tr:last-child td {
     border-bottom-width: 1px;
     border-style: solid;
-    border-color: #007BFF;
+    border-color: var(--clr-quaternary);
 }
 
 
@@ -52,20 +52,23 @@ input:not([type="submit"]){
     width: 100%;
     padding: 4px 2px;
     border-radius: 3px;
-    border:1px solid silver;
+    border:1px solid var(--clr-secondary);
 }
 input[type="submit"]{
-    color:#fff;
+    color:var(--clr-primary);
     padding: 5px;
-    background-color: #007BFF;
+    background-color: var(--clr-quaternary);
     border: none;   
     float: right;
+}
+.btn {
+    text-shadow: 0 0 10px var(--clr-secondary);
 }
 .btn.danger{
     margin-top: 5px;
     margin-bottom: 5px;
-    background-color: #ff0800;
-    color:#fff;
+    background-color: var(--clr-senary);
+    color:var(--clr-primary);
     padding: 5px;
     border: none;   
     float: right;
