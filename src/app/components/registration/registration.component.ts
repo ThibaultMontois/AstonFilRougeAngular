@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Role } from 'src/app/enums/role.enum';
 import { Address } from 'src/app/models/address.model';
 import { User } from 'src/app/models/user.model';
+import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
   selector: 'app-registration',
@@ -14,7 +15,7 @@ export class RegistrationComponent implements OnInit {
 
   formGroup!: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private db: DatabaseService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.formGroup = this.fb.group({
@@ -57,6 +58,10 @@ export class RegistrationComponent implements OnInit {
         Validators.required,
         Validators.minLength(2)
       ]],
+      passwordConf: ['', [
+        Validators.required,
+        Validators.minLength(2)
+      ]],
       cguv: ['', [
         Validators.requiredTrue
       ]],
@@ -82,9 +87,12 @@ export class RegistrationComponent implements OnInit {
     if (password !== passwordConf) return;
 
     let address: Address = new Address(0, street, zipCode, city, number, complement);
-    let user: User = new User(0, firstName, lastName, password, email, phoneNumber, address, birthDate, Role.Member);
-
-    // TO DO
+    this.db.createAddress(address).subscribe((response: any) => {
+      let user: User = new User(0, firstName, lastName, password, email, phoneNumber, Role.Member, response.AddressId, birthDate);
+      this.db.createUser(user).subscribe((response: any) => {
+        if (response && response.userId) this.router.navigate(['']);
+      });
+    });
   }
 
   onCancel(): void {

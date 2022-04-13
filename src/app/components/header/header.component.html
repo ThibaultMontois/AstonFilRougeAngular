@@ -50,16 +50,19 @@
                 <a class="btn select-title" href="#">Mon compte</a>
                     <ul>
                         <li class="btn">
-                            <a href="/user">Mes Infos</a>
+                            <a href="#" routerLink="user">Mes Infos</a>
+                        </li>
+                        <li class="btn">
+                            <a href="#" routerLink="reservation">Réservations</a>
                         </li>
                         <li class="btn" *ngIf="authUser && (authUser.role == 8 || authUser.role == 4 )">
-                            <a href="/admin">Administration</a>
+                            <a href="#">Administration</a>
                         </li>
                         <li class="btn" *ngIf="authUser && (authUser.role == 8 || authUser.role == 4 )">
-                            <a href="/admin">Statistiques</a>
+                            <a href="#">Statistiques</a>
                         </li>
                         <li class="btn" *ngIf="authUser && (authUser.role == 1 || authUser.role == 2)">
-                            <a href="/#">Mon planning</a>
+                            <a href="#">Mon planning</a>
                         </li>
                     </ul>
             </li>
