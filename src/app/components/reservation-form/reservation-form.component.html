@@ -3,7 +3,7 @@
     <form class="resa-form__form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
         <select formControlName="selectedCourseId" class="courseSelect">
             <option *ngFor="let course of courseList" [value]="course.id">
-                {{course.title}} {{course.date}}
+                {{ course.title }} le {{ course.date | date: 'fullDate': '+0200': 'fr' | titlecase }} de {{ course.startHour | date: 'hh:mm' }} à {{ course.endHour | date: 'hh:mm' }}
             </option>
         </select>
         <div class="resa-form__form__btns">
