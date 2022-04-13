@@ -1,4 +1,5 @@
-import { AfterContentInit, Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
 import { Reservation } from 'src/app/models/reservation.model';
 import { User } from 'src/app/models/user.model';
 import { AuthUserService } from 'src/app/services/auth-user.service';
@@ -9,9 +10,9 @@ import { DatabaseService } from 'src/app/services/database.service';
   templateUrl: './reservation-page.component.html',
   styleUrls: ['./reservation-page.component.scss']
 })
-export class ReservationPageComponent implements AfterContentInit {
+export class ReservationPageComponent implements OnInit {
 
-  user!: User | null;
+  user!: User;
   resaList: Reservation[];
 
   constructor(private dbService: DatabaseService, private authUserService: AuthUserService) {
@@ -19,29 +20,27 @@ export class ReservationPageComponent implements AfterContentInit {
   }
 
   ngOnInit(): void {
-
-   }
-
-  ngAfterContentInit(): void {
     const email: string | null = this.authUserService.user!.email;
-    if (email) this.GetUser(email).then((user: User | null) => this.GetAllUserResa(user));
+    if (email) {
+      this.GetUser(email);
+      setTimeout(() => { if (this.user) this.GetAllUserResa() }, 1000);     
+    }
   }
 
-  async GetUser(email: string): Promise<User | null> {
+  GetUser(email: string): void {
     this.dbService.getUserByEmail(email).subscribe((response: any) => {
       var u = response.user;
       this.user = new User(u.id, u.firstName, u.lastName, u.password, u.email, u.phoneNUmber, u.role, u.addressId, u.birthDate, u.clubId, u.job, u.description, u.avatarUrl, u.creationDate, u.updateDate);
-    });    
-    return Promise.resolve(this.user);
+    });
   }
 
-  GetAllUserResa(user: User | null): void {
-    if (user) this.dbService.getReservationList().subscribe((response: any) => {
-      response.forEach((element: any) => {
-        if (element.clientId === user.id) {
-          // this.resaList.push(new Reservation(element.i...));
+  GetAllUserResa(): void {
+    this.dbService.getReservationList().subscribe((response: any) => {
+      response.reservationList.forEach((element: any) => {
+        if (element.clientId === this.user.id) {
+          this.resaList.push(new Reservation(element.id, element.clientId, element.courseId, element.status));
         }
       });
-    })
+    });
   }
 }
