@@ -55,6 +55,15 @@
                         <li class="btn">
                             <a href="#" routerLink="reservation">Réservations</a>
                         </li>
+                        <li class="btn" *ngIf="authUser && (authUser.role == 8 || authUser.role == 4 )">
+                            <a href="#">Administration</a>
+                        </li>
+                        <li class="btn" *ngIf="authUser && (authUser.role == 8 || authUser.role == 4 )">
+                            <a href="#">Statistiques</a>
+                        </li>
+                        <li class="btn" *ngIf="authUser && (authUser.role == 1 || authUser.role == 2)">
+                            <a href="#">Mon planning</a>
+                        </li>
                     </ul>
             </li>
         </ul>  
