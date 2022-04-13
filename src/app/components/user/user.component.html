@@ -10,43 +10,43 @@
             <tr>
                 <td>
                     <label for="nom">Nom*</label>
-                    <input type="text" name="nom" value="" required placeholder="Obligatoire">
+                    <input type="text" name="nom" value="{{userData.user.firstName}}" required placeholder="Obligatoire">
                 </td>
                 <td>
                     <label for="prenom">Prénom*</label>
-                    <input type="text" name="prenom" value="" required placeholder="Obligatoire">
+                    <input type="text" name="prenom" value="{{userData.user.lastName}}" required placeholder="Obligatoire">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="adresse">Adresse*</label>
-                    <input type="text" name="adresse" value="" placeholder="Obligatoire">
+                    <input type="text" name="adresse" value="{{userAddress.address.street}}" placeholder="Obligatoire">
                 </td>
                 <td>
                     <label for="cplmtAdresse">Complément d'adresse</label>
-                    <input type="text" name="cplmtAdresse" value="">
+                    <input type="text" name="cplmtAdresse" value="{{userAddress.address.complement}}">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="codepostal">Code postal*</label>
-                    <input type="number" name="codepostal" minlength="5" maxlength="5" value="" required
+                    <input type="number" name="codepostal" minlength="5" maxlength="5" value="{{userAddress.address.zipCode}}" required
                         placeholder="Obligatoire">
                 </td>
                 <td>
                     <label for="commune">Commune*</label>
-                    <input type="text" name="commune" value="" required placeholder="Obligatoire">
+                    <input type="text" name="commune" value="{{userAddress.address.city}}" required placeholder="Obligatoire">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="email">E-mail*</label>
-                    <input type="email" name="email" minlength="7" maxlength="2000" value="" required
+                    <input type="email" name="email" minlength="7" maxlength="2000" value="{{userData.user.email}}" required
                         placeholder="Obligatoire">
                 </td>
                 <td>
                     <label for="phone">Téléphone*</label>
-                    <input type="phone" name="phone" minlength="10" maxlength="10" value="" required
+                    <input type="phone" name="phone" minlength="10" maxlength="10" value="{{userData.user.phoneNumber}}" required
                         placeholder="Obligatoire">
                 </td>
             </tr>
