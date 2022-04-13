@@ -15,6 +15,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { UserListComponent } from './components/admin/user-list/user-list.component';
 import { DeleteUserComponent } from './components/admin/delete-user/delete-user.component';
 import { UserComponent } from './components/user/user.component';
+import { ReservationPageComponent } from './components/reservation-page/reservation-page.component';
+import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,13 +29,19 @@ const routes: Routes = [
   {
     path: 'admin', children: [
       { path: 'userList', component: UserListComponent },
-      { path: '', component: AdminComponent },
-      { path: 'deleteUser', component: DeleteUserComponent }
+      { path: 'deleteUser', component: DeleteUserComponent },
+      { path: '', component: AdminComponent }
     ]
   },
-  { path: 'user', component: UserComponent},
+  { path: 'user', component: UserComponent },
   { path: 'team', component: TeamComponent },
   { path: 'registration', component: RegistrationComponent },
+  {
+    path: 'reservation', children: [
+      { path: 'add', component: ReservationFormComponent },
+      { path: '', component: ReservationPageComponent }
+    ]
+  },
   { path: 'privacy-statement', component: PrivacyStatementComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },

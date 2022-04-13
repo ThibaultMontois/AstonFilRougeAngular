@@ -28,8 +28,8 @@ export class ReservationFormComponent implements OnInit {
     const selectedCourse : number = this.formGroup.value.selectedId;
     const requestedDate :Date = this.formGroup.value.requestDate;
 
-    const resa : Reservation = new Reservation(courseId=selectedCourse);
-    this.dbService.createReservation(resa);
+    // const resa : Reservation = new Reservation(courseId=selectedCourse);
+    // this.dbService.createReservation(resa);
   }
 
 }
