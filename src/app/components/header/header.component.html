@@ -24,14 +24,8 @@
             <li class="header__menu__under">
                 <a class="btn select-title" href="#">Clubs</a>
                 <ul>
-                    <li class="btn">
-                        <a href="#">Lens</a>
-                    </li>
-                    <li class="btn">
-                        <a href="#">Lambersart</a>
-                    </li>
-                    <li class="btn">
-                        <a href="#">Lille</a>
+                    <li class="btn" *ngFor="let club of clubList">
+                        <a href="#">{{club.name}}</a>
                     </li>
                     <li class="btn">
                         <a href="#">Voir la liste</a>

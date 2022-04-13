@@ -1,100 +1,17 @@
 <div class="c_container">
     <div class="cardList">
 
-        <div class="card">
+        <div class="card" *ngFor="let user of teamList">
             <div class="cover"></div>
             <div class="content">
-                <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
+                <div class="profil" [ngStyle]="{'background-image': 'url(/assets/img/avatars/default_avatar.jpg)'}" ></div>
                 <div>
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
+                    <p class="identity">{{user.firstName}} {{user.lastName}}</p>
+                    <p class="job">{{user.job}}</p>
+                    <p class="description">{{user.description === null ? "Pas de biographie pour "+user.firstName+".\r" : user.description}}</p>
                 </div>
             </div>
         </div>
 
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cover"></div>
-            <div class="content">
-                    <div class="profil" style="background-image: url('https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-614810.jpg&fm=jpg');"></div>
-                <div class="detailList">
-                    <p class="identity">Pierre Dupond</p>
-                    <p class="job">Masseur</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse!</p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
