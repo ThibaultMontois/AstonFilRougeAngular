@@ -1,5 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { Reservation } from 'src/app/models/reservation.model';
 import { User } from 'src/app/models/user.model';
 import { AuthUserService } from 'src/app/services/auth-user.service';
