@@ -5,12 +5,12 @@
             <select formControlName="selectedCourse" class="courseSelect">
                    <option *ngFor = "let course of courseList"
                    [value]="course.id">
-                    {{course.title}}
+                    {{course.title}} {{course.date}}
                    </option> 
             </select>
             <div class="form__btns">
                 <button class="btn registration__cancel" (click)="onCancel()">Annuler</button>
-                <button class="btn registration__valid" type='submit'>Valider</button>
+                <button class="btn registration__valid" type='submit' [disabled]="formGroup.invalid">Valider</button>
             </div>
         </form> 
     </div>
