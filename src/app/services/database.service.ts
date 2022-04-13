@@ -70,9 +70,15 @@ export class DatabaseService {
     return this.http.get(`${this.apiUrl}/course/getall`);
   }
 
+  getCourseListByDate(date : Date): Observable<any>{
+    return this.http.get(`${this.apiUrl}/course/getall/${date}`);
+  }
+
   getCourseById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/course/get/${id}`);
   }
+
+  
 
   updateCourse(id: number, course: Course): Observable<any> {
     return this.http.patch(`${this.apiUrl}/course/update/${id}`, course);
