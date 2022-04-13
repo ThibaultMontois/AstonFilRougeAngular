@@ -17,14 +17,14 @@ export class teamcardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.db.getUserList().subscribe((response: any) => {
-      console.log(response);
+      //console.log(response);
       let userList: User[] = response.userList;
       let i: number = 0;
       let t: number = 0;
       while (t < userList.length) {
         if (userList[i].role === 4 || userList[i].role === 2) {
           this.teamList.push(userList[i]);
-          console.log(userList[i]);
+          //console.log(userList[i]);
           t++;
         }
         i++;
